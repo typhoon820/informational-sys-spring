@@ -32,7 +32,7 @@ public class GenreDAOImpl extends AbstractDAO<Integer, GenreEntity> implements G
 
     @Override
     public void delete(int id) {
-        Query query = getSession().createSQLQuery("DELETE FROM GENRE WHERE id = :id");
+        Query query = getSession().createSQLQuery("DELETE FROM genre WHERE id = :id");
         query.setInteger("id", id);
         query.executeUpdate();
     }

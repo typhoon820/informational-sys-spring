@@ -9,9 +9,9 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox fx:id="slideBox" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="576.0" prefWidth="355.0" style="-fx-background-color: #2F4F4F;" stylesheets="@../css/combobox.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.music.controller.InsertionController">
+<VBox fx:id="slideBox" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="576.0" prefWidth="355.0" style="-fx-background-color: #2F4F4F;" stylesheets="@/css/combobox.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.music.controller.InsertionController">
    <children>
-      <ComboBox fx:id="comboBox" onAction="#choseItem" prefHeight="26.0" prefWidth="349.0" promptText="What are we going to add?" stylesheets="@../css/combobox.css">
+      <ComboBox fx:id="comboBox" onAction="#choseItem" prefHeight="26.0" prefWidth="349.0" promptText="What are we going to add?" stylesheets="@/css/combobox.css">
          <VBox.margin>
             <Insets bottom="10.0" left="10.0" right="60.0" top="20.0" />
          </VBox.margin>
@@ -27,7 +27,7 @@
           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
       </GridPane>
-      <JFXButton fx:id="addButton" buttonType="RAISED" onAction="#addModel" prefHeight="50.0" prefWidth="160.0" stylesheets="@../css/combobox.css" text="Add">
+      <JFXButton fx:id="addButton" buttonType="RAISED" onAction="#addModel" prefHeight="50.0" prefWidth="160.0" stylesheets="@/css/combobox.css" text="Add">
          <font>
             <Font size="20.0" />
          </font>

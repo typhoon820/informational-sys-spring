@@ -1,0 +1,21 @@
+.combo-box{
+    -fx-background-color: ALICEBLUE;
+
+}
+.combo-box .list-cell{
+    -fx-background: cadetblue;
+    -fx-background-color: transparent;
+}
+.combo-box-popup .list-view{
+    -fx-background-color: ALICEBLUE, ALICEBLUE;
+}
+
+.combo-box-popup .list-cell:hover{
+    -fx-background-color: cadetblue;
+}
+.jfx-button{
+    -fx-background-color: ALICEBLUE;
+}
+.jfx-button:hover {
+    -fx-background-color: cadetblue;
+}

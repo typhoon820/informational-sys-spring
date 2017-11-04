@@ -3,7 +3,7 @@ package com.music.model;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "CD", schema = "mydb", catalog = "")
+@Table(name = "cd", schema = "mydb", catalog = "")
 public class CdEntity extends AbstractModel{
     private int id;
     private Integer copiesAvailable;

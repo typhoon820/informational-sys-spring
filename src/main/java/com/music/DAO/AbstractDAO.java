@@ -8,7 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import java.io.Serializable;
 import java.lang.reflect.ParameterizedType;
 
-public class AbstractDAO<PK extends Serializable, E> {
+public abstract class AbstractDAO<PK extends Serializable, E> {
 
     private final Class<PK> persistenceClass;
 

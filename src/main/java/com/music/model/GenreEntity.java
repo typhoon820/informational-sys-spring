@@ -1,15 +1,17 @@
 package com.music.model;
 
+import com.music.utils.Annotations.Getter;
+
 import javax.persistence.*;
-import javax.validation.constraints.Null;
+import java.util.ArrayList;
 import java.util.List;
 
 @Entity
-@Table(name = "GENRE", schema = "mydb", catalog = "")
+@Table(name = "genre", schema = "mydb")
 public class GenreEntity extends AbstractModel {
     private int id;
     private String genre;
-    private List<SongEntity> songsOfGenre;
+    private List<SongEntity> songsOfGenre = new ArrayList<>();
 
     @OneToMany(mappedBy = "genre")
     public List<SongEntity> getSongsOfGenre() {
@@ -60,4 +62,23 @@ public class GenreEntity extends AbstractModel {
         result = 31 * result + (genre != null ? genre.hashCode() : 0);
         return result;
     }
+
+    @Transient
+    @Getter(num = 1)
+    public String getG(){
+        return genre;
+    }
+
+    @Transient
+    @Getter(num = 2)
+    public List<String> getS(){
+        List<String> res = new ArrayList<>();
+        if (songsOfGenre.size()!=0) {
+            for (SongEntity s : songsOfGenre) {
+                res.add(s.getName());
+            }
+        }
+        return res;
+    }
+
 }

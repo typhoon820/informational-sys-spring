@@ -2,22 +2,20 @@ package com.music.utils;
 
 import com.jfoenix.controls.JFXTextField;
 import com.music.model.AbstractModel;
-import javafx.fxml.FXMLLoader;
+import com.music.model.BandEntity;
+import com.music.model.GenreEntity;
 import javafx.geometry.HPos;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.ButtonType;
+import javafx.scene.control.Label;
 import javafx.scene.layout.ColumnConstraints;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.RowConstraints;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
-import javafx.stage.Stage;
-import javafx.stage.StageStyle;
-import sun.reflect.Reflection;
+import javafx.scene.text.TextAlignment;
+import org.springframework.stereotype.Component;
 
-import java.io.IOException;
 import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
@@ -25,7 +23,10 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
+@Component
 public class Utils {
+
+    private static StageManager stageManager = StageManager.getInstance();
 
     public static void adjustConstraints(GridPane gridPane, AbstractModel model) {
         int difference = model.getClass().getDeclaredFields().length - gridPane.getRowConstraints().size();
@@ -126,7 +127,8 @@ public class Utils {
                 textFields[i].setEditable(false);
                 gridPane.add(textFields[i], 0, i);
             } else {
-                textFields[i].setEditable(true);
+//                if(textFields[i].isEditable())
+//                textFields[i].setEditable(true);
                 gridPane.add(textFields[i], 1, i - textFields.length / 2);
             }
             GridPane.setHalignment(textFields[i], HPos.CENTER);
@@ -134,6 +136,9 @@ public class Utils {
     }
 
     public static void setTextFieldsData(GridPane gridPane, AbstractModel model) {
+        BoolWrapper bool = new BoolWrapper();
+        bool.setValue(false);
+        Field[] fields = model.getClass().getDeclaredFields();
         List<String> fieldNames = Utils.getFieldNames(model);
         List<Method> getters = Utils.getMethods(model);
         int fieldsCount = fieldNames.size();
@@ -147,27 +152,29 @@ public class Utils {
                 if (getters.get(i).getReturnType().equals(List.class)) {
                     if (((List) getters.get(i).invoke(model)).size() == 0) {
                         textFields[j].setText("Press to add some...");
+                        textFields[j].setEditable(false);
                         textFields[j].setOnMousePressed((e) -> {
-
-                            //Reflection.getCallerClass()
-                            try {
-                                Parent parent = FXMLLoader.load(Reflection.getCallerClass(2).getResource("/sample/view/sample.fxml"));
-                                Stage stage = new Stage(StageStyle.DECORATED);
-                                stage.setTitle("111");
-                                stage.setScene(new Scene(parent));
-                                stage.setResizable(true);
-                                stage.show();
-                            } catch (IOException ex) {
-                                ex.printStackTrace();
-                            }
+                           loadInLambda(bool,"../views/sample.fxml", false, "kekus");
                         });
                     } else {
+                        textFields[j].setEditable(false);
                         textFields[j].setText("Press to get view...");
+                        textFields[j].setOnMousePressed((e) -> {
+                            loadInLambda(bool,"../views/sample.fxml", false, "kek");
+                        });
                     }
                 } else {
                     if (getters.get(i).invoke(model) != null)
                         textFields[j].setText(getters.get(i).invoke(model).toString());
                     else textFields[j].setText("");
+
+                    if (isFieldNonCollectionObject(fields[i + 1])) {
+                        textFields[j].setEditable(false);
+                        String fileName = getFileNameOfListController(fields[i+1]);
+                        textFields[j].setOnMousePressed((e) -> {
+                            loadInLambda(bool,fileName,false,"List");
+                        });
+                    }
                 }
             } catch (IllegalAccessException e) {
                 e.printStackTrace();
@@ -178,4 +185,39 @@ public class Utils {
         Utils.setTextFieldStyle(gridPane, textFields);
     }
 
+    private static void loadInLambda(BoolWrapper isLoaded, String path, boolean resizable, String title){
+        if (!isLoaded.isTrue()){
+            isLoaded.setValue(true);
+            stageManager.showStage(path, resizable, title)
+                    .setOnCloseRequest(windowEvent -> isLoaded.setValue(false));
+        }
+    }
+
+    public static void printInfoLogo(GridPane gridPane) {
+        Label startLabel = new Label("Detailed information of selected row will be provided here");
+        startLabel.setFont(new Font("System", 24));
+        startLabel.setTextFill(Color.ALICEBLUE);
+        startLabel.setWrapText(true);
+        startLabel.setTextAlignment(TextAlignment.CENTER);
+        gridPane.add(startLabel, 0, 0);
+    }
+
+    public static boolean isFieldNonCollectionObject(Field f) {
+        //AbstractModel o = f.getType();
+        if (f.getType().getSuperclass() != null) {
+            return ((Class)(f.getType())).getSuperclass().equals(AbstractModel.class);
+        }
+        return false;
+    }
+
+    private static String getFileNameOfListController(Field f){
+        if(((Class)f.getType()).equals(BandEntity.class))
+            return "../views/bandList.fxml";
+        if(((Class)f.getType()).equals(GenreEntity.class))
+            return "../views/genreList.fxml";
+        return "../views/sample.fxml";
+    }
+
+    //TODO: list controllers, (when add button pressed on controller -> reload gridpane by Utils methods)
+    //TODO: to update info possible solution is to send an event to parent view or somehow pass gridPane entity
 }

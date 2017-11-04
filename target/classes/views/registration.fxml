@@ -11,7 +11,7 @@
 <?import javafx.scene.text.Font?>
 
 
-<AnchorPane prefHeight="250.0" prefWidth="350.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.RegistrationController">
+<AnchorPane prefHeight="250.0" prefWidth="350.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.music.controller.RegistrationController">
    <children>
       <VBox layoutX="117.0" layoutY="120.0" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
@@ -41,12 +41,12 @@
             </JFXPasswordField>
             <HBox prefHeight="112.0" prefWidth="350.0">
                <children>
-                  <JFXButton fx:id="regButton" onAction="#register" prefHeight="107.0" prefWidth="175.0" stylesheets="@../css/buttonstyle.css" text="Register">
+                  <JFXButton fx:id="regButton" onAction="#register" prefHeight="107.0" prefWidth="175.0" stylesheets="@/css/buttonstyle.css" text="Register">
                      <font>
                         <Font size="20.0" />
                      </font>
                   </JFXButton>
-                  <JFXButton fx:id="cancelButton" layoutX="10.0" layoutY="10.0" onAction="#cancel" prefHeight="107.0" prefWidth="175.0" stylesheets="@../css/buttonstyle.css" text="Cancel">
+                  <JFXButton fx:id="cancelButton" layoutX="10.0" layoutY="10.0" onAction="#cancel" prefHeight="107.0" prefWidth="175.0" stylesheets="@/css/buttonstyle.css" text="Cancel">
                      <font>
                         <Font size="20.0" />
                      </font>

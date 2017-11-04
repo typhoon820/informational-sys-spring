@@ -5,12 +5,12 @@ import java.util.List;
 
 @Entity
 @Table(name = "user_status", schema = "mydb")
-public class UserStatusEntity {
+public class UserStatusEntity extends AbstractModel{
     private int id;
     private String status;
     private List<UserEntity> users;
 
-    @OneToMany(mappedBy = "status")
+    @OneToMany(mappedBy = "userStatus")
     public List<UserEntity> getUsers() {
         return users;
     }
@@ -20,6 +20,7 @@ public class UserStatusEntity {
     }
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", nullable = false)
     public int getId() {
         return id;

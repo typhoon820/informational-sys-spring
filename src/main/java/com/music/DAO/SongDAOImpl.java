@@ -32,7 +32,7 @@ public class SongDAOImpl extends AbstractDAO<Integer, SongEntity> implements Son
 
         @Override
         public void delete(int id) {
-            Query query = getSession().createSQLQuery("DELETE FROM SONG WHERE id = :id");
+            Query query = getSession().createSQLQuery("DELETE FROM song WHERE id = :id");
             query.setInteger("id", id);
             query.executeUpdate();
         }
@@ -41,5 +41,11 @@ public class SongDAOImpl extends AbstractDAO<Integer, SongEntity> implements Son
         public List<SongEntity> findAll() {
             Criteria criteria = createEntityCreteria();
             return (List<SongEntity>)criteria.list();
+        }
+
+        @Override
+        public void update(SongEntity song){
+            getSession().update(song);
+
         }
 }

@@ -14,4 +14,5 @@ public interface SongDAO {
     void save(SongEntity song);
     void delete (int id);
     List<SongEntity> findAll();
+    void update(SongEntity song);
 }

@@ -1,7 +1,119 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5ffb0213-d0b6-49bf-89a9-c9f9700e8611" name="Default" comment="" />
+    <list default="true" id="5ffb0213-d0b6-49bf-89a9-c9f9700e8611" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/music/utils/Observable.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/music/utils/GenreObserver.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/css/combobox.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/music/utils/Observer.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/music/controller/BandListController.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/music/utils/BandObserver.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/music/controller/GenreListController.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/music/DAO/SongAlbumDAOImpl.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/music/model/BandInfoEntity.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/music/utils/ModelDispatcher.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/views/bandList.fxml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/music/utils/GridPaneWrapper.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/music/view/TableSongView.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/music/utils/BoolWrapper.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/music/view/AlbumVersionSongView.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/music/DAO/SongAlbumDAO.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/views/genreList.fxml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/css/buttonstyle.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/music/view/FullSongView.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/music/controller/AdditionalInfoController.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/views/additionalInfoList.fxml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/music/view/autogen/FxmlEnum.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/music/view/autogen/FxmlEnum$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/fxml/registration.fxml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/music/configuration/ControllerConfig$ViewHolder.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/music/view/autogen/FxmlEnum.class" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/music/model/Test.class" afterPath="$PROJECT_DIR$/target/classes/com/music/model/Test.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/Application.java" afterPath="$PROJECT_DIR$/src/main/java/com/Application.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/music/service/SongServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/music/service/SongServiceImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/music/configuration/ControllerConfig.java" afterPath="$PROJECT_DIR$/src/main/java/com/music/configuration/ControllerConfig.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/music/controller/InsertionController.java" afterPath="$PROJECT_DIR$/src/main/java/com/music/controller/InsertionController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/music/model/SongHasAlbumEntity.java" afterPath="$PROJECT_DIR$/src/main/java/com/music/model/SongHasAlbumEntity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/music/DAO/AlbumDAOImpl.class" afterPath="$PROJECT_DIR$/target/classes/com/music/DAO/AlbumDAOImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/AbstractJavaFXApplication.java" afterPath="$PROJECT_DIR$/src/main/java/com/AbstractJavaFXApplication.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/music/DAO/ArtistDAOImpl.class" afterPath="$PROJECT_DIR$/target/classes/com/music/DAO/ArtistDAOImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/music/configuration/ControllerConfig.class" afterPath="$PROJECT_DIR$/target/classes/com/music/configuration/ControllerConfig.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/music/DAO/GenreDAOImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/music/DAO/GenreDAOImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/views/insertionBar.fxml" afterPath="$PROJECT_DIR$/src/main/resources/views/insertionBar.fxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/music/model/UserEntity.java" afterPath="$PROJECT_DIR$/src/main/java/com/music/model/UserEntity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/music/utils/Utils.java" afterPath="$PROJECT_DIR$/src/main/java/com/music/utils/Utils.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/music/model/AlbumEntity.class" afterPath="$PROJECT_DIR$/target/classes/com/music/model/AlbumEntity.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/music/controller/MenuController.class" afterPath="$PROJECT_DIR$/target/classes/com/music/controller/MenuController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/music/controller/MenuController.java" afterPath="$PROJECT_DIR$/src/main/java/com/music/controller/MenuController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/music/model/BandEntity.class" afterPath="$PROJECT_DIR$/target/classes/com/music/model/BandEntity.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/music/controller/InsertionController.class" afterPath="$PROJECT_DIR$/target/classes/com/music/controller/InsertionController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/music/model/AlbumEntity.java" afterPath="$PROJECT_DIR$/src/main/java/com/music/model/AlbumEntity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/music/model/UserStatusEntity.class" afterPath="$PROJECT_DIR$/target/classes/com/music/model/UserStatusEntity.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/views/menu.fxml" afterPath="$PROJECT_DIR$/target/classes/views/menu.fxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/music/model/SongHasAlbumEntity.class" afterPath="$PROJECT_DIR$/target/classes/com/music/model/SongHasAlbumEntity.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/music/model/Test.java" afterPath="$PROJECT_DIR$/src/main/java/com/music/model/Test.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/music/DAO/AlbumDAOImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/music/DAO/AlbumDAOImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/music/DAO/SongDAOImpl.class" afterPath="$PROJECT_DIR$/target/classes/com/music/DAO/SongDAOImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/music/DAO/SongDAO.class" afterPath="$PROJECT_DIR$/target/classes/com/music/DAO/SongDAO.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/music/model/UserEntity.class" afterPath="$PROJECT_DIR$/target/classes/com/music/model/UserEntity.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/music/service/SongServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/com/music/service/SongServiceImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/music/service/UserServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/com/music/service/UserServiceImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/c9940ca3-364d-4cc7-8dd4-85d272291d64/_metadata_/metadata_i" afterPath="$PROJECT_DIR$/.idea/dataSources/c9940ca3-364d-4cc7-8dd4-85d272291d64/_metadata_/metadata_i" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/AbstractJavaFXApplication.class" afterPath="$PROJECT_DIR$/target/classes/com/AbstractJavaFXApplication.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/music/model/SongEntity.java" afterPath="$PROJECT_DIR$/src/main/java/com/music/model/SongEntity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/music/model/GenreEntity.java" afterPath="$PROJECT_DIR$/src/main/java/com/music/model/GenreEntity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/music/DAO/BandDAOImpl.class" afterPath="$PROJECT_DIR$/target/classes/com/music/DAO/BandDAOImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/music/configuration/SpringFxmlLoader.class" afterPath="$PROJECT_DIR$/target/classes/com/music/configuration/SpringFxmlLoader.class" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/sample.fxml" afterPath="$PROJECT_DIR$/src/main/resources/views/sample.fxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/music/utils/StageManager.class" afterPath="$PROJECT_DIR$/target/classes/com/music/utils/StageManager.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/music/utils/AnnotationAnalyzer.class" afterPath="$PROJECT_DIR$/target/classes/com/music/utils/AnnotationAnalyzer.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/music/controller/RegistrationController.class" afterPath="$PROJECT_DIR$/target/classes/com/music/controller/RegistrationController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/music/utils/Utils.class" afterPath="$PROJECT_DIR$/target/classes/com/music/utils/Utils.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/music/model/AbstractModel.java" afterPath="$PROJECT_DIR$/src/main/java/com/music/model/AbstractModel.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/music/model/ArtistBandEntity.class" afterPath="$PROJECT_DIR$/target/classes/com/music/model/ArtistBandEntity.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/Application.class" afterPath="$PROJECT_DIR$/target/classes/com/Application.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/music/DAO/SongDAO.java" afterPath="$PROJECT_DIR$/src/main/java/com/music/DAO/SongDAO.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/music/DAO/ArtistDAOImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/music/DAO/ArtistDAOImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/music/controller/AbstractController.class" afterPath="$PROJECT_DIR$/target/classes/com/music/controller/AbstractController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/music/model/SongEntity.class" afterPath="$PROJECT_DIR$/target/classes/com/music/model/SongEntity.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/views/menu.fxml" afterPath="$PROJECT_DIR$/src/main/resources/views/menu.fxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/music/controller/MainController.class" afterPath="$PROJECT_DIR$/target/classes/com/music/controller/MainController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/c9940ca3-364d-4cc7-8dd4-85d272291d64.xml" afterPath="$PROJECT_DIR$/.idea/dataSources/c9940ca3-364d-4cc7-8dd4-85d272291d64.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/music/model/ArtistEntity.java" afterPath="$PROJECT_DIR$/src/main/java/com/music/model/ArtistEntity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/music/model/ArtistBandEntity.java" afterPath="$PROJECT_DIR$/src/main/java/com/music/model/ArtistBandEntity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/music/controller/RegistrationController.java" afterPath="$PROJECT_DIR$/src/main/java/com/music/controller/RegistrationController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/music/model/CdHasSongEntity.class" afterPath="$PROJECT_DIR$/target/classes/com/music/model/CdHasSongEntity.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/music/DAO/GenreDAOImpl.class" afterPath="$PROJECT_DIR$/target/classes/com/music/DAO/GenreDAOImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/infosys.iml" afterPath="$PROJECT_DIR$/infosys.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/music/model/CdEntity.java" afterPath="$PROJECT_DIR$/src/main/java/com/music/model/CdEntity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/music/model/BandEntity.java" afterPath="$PROJECT_DIR$/src/main/java/com/music/model/BandEntity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/music/DAO/AbstractDAO.class" afterPath="$PROJECT_DIR$/target/classes/com/music/DAO/AbstractDAO.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/c9940ca3-364d-4cc7-8dd4-85d272291d64/_src_/schema/mydb.zip" afterPath="$PROJECT_DIR$/.idea/dataSources/c9940ca3-364d-4cc7-8dd4-85d272291d64/_src_/schema/mydb.zip" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/music/DAO/SongDAOImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/music/DAO/SongDAOImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/music/model/CdHasSongEntity.java" afterPath="$PROJECT_DIR$/src/main/java/com/music/model/CdHasSongEntity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/music/service/UserServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/music/service/UserServiceImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/views/insertionBar.fxml" afterPath="$PROJECT_DIR$/target/classes/views/insertionBar.fxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/music/model/CdEntity.class" afterPath="$PROJECT_DIR$/target/classes/com/music/model/CdEntity.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/music/model/GenreEntity.class" afterPath="$PROJECT_DIR$/target/classes/com/music/model/GenreEntity.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/music/controller/AbstractController.java" afterPath="$PROJECT_DIR$/src/main/java/com/music/controller/AbstractController.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/fxml/registration.fxml" afterPath="$PROJECT_DIR$/src/main/resources/views/registration.fxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/c9940ca3-364d-4cc7-8dd4-85d272291d64/_metadata_/metadata.keystream" afterPath="$PROJECT_DIR$/.idea/dataSources/c9940ca3-364d-4cc7-8dd4-85d272291d64/_metadata_/metadata.keystream" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/music/service/SongService.class" afterPath="$PROJECT_DIR$/target/classes/com/music/service/SongService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/music/model/UserStatusEntity.java" afterPath="$PROJECT_DIR$/src/main/java/com/music/model/UserStatusEntity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/music/DAO/BandDAOImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/music/DAO/BandDAOImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/music/controller/MainController.java" afterPath="$PROJECT_DIR$/src/main/java/com/music/controller/MainController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/music/service/SongService.java" afterPath="$PROJECT_DIR$/src/main/java/com/music/service/SongService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/music/utils/AnnotationAnalyzer.java" afterPath="$PROJECT_DIR$/src/main/java/com/music/utils/AnnotationAnalyzer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/music/configuration/SpringFxmlLoader.java" afterPath="$PROJECT_DIR$/src/main/java/com/music/configuration/SpringFxmlLoader.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/music/utils/StageManager.java" afterPath="$PROJECT_DIR$/src/main/java/com/music/utils/StageManager.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/music/model/ArtistEntity.class" afterPath="$PROJECT_DIR$/target/classes/com/music/model/ArtistEntity.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/c9940ca3-364d-4cc7-8dd4-85d272291d64/_metadata_/metadata" afterPath="$PROJECT_DIR$/.idea/dataSources/c9940ca3-364d-4cc7-8dd4-85d272291d64/_metadata_/metadata" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/c9940ca3-364d-4cc7-8dd4-85d272291d64/_metadata_/metadata.keystream.len" afterPath="$PROJECT_DIR$/.idea/dataSources/c9940ca3-364d-4cc7-8dd4-85d272291d64/_metadata_/metadata.keystream.len" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/music/DAO/AbstractDAO.java" afterPath="$PROJECT_DIR$/src/main/java/com/music/DAO/AbstractDAO.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/c9940ca3-364d-4cc7-8dd4-85d272291d64/_metadata_/metadata.len" afterPath="$PROJECT_DIR$/.idea/dataSources/c9940ca3-364d-4cc7-8dd4-85d272291d64/_metadata_/metadata.len" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/c9940ca3-364d-4cc7-8dd4-85d272291d64/_metadata_/metadata.values.at" afterPath="$PROJECT_DIR$/.idea/dataSources/c9940ca3-364d-4cc7-8dd4-85d272291d64/_metadata_/metadata.values.at" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/../fxmlscanner/fxml-scanner-maven-plugin-tutorial/target/" />
@@ -46,120 +158,105 @@
         <item name="mydb@localhost" type="e3449647:DbNodeDescriptor" />
         <item name="mydb" type="e3449647:DbNodeDescriptor" />
         <item name="" type="fce03ad6:DatabaseStructure$GroupNode" />
+        <item name="song_has_album" type="e3449647:DbNodeDescriptor" />
       </path>
     </expand>
     <select />
   </component>
+  <component name="FavoritesManager">
+    <favorites_list name="infosys" />
+  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="MainController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/music/controller/MainController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="558">
-              <caret line="68" column="0" lean-forward="false" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ControllerConfig.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/music/configuration/ControllerConfig.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="41" column="0" lean-forward="false" selection-start-line="41" selection-start-column="2" selection-end-line="45" selection-end-column="7" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#2448#2449#0" expanded="true" />
-                <element signature="e#2500#2501#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="menu.fxml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/views/menu.fxml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1150">
-              <caret line="2" column="41" lean-forward="false" selection-start-line="2" selection-start-column="41" selection-end-line="2" selection-end-column="41" />
-              <folding />
-            </state>
-          </provider>
-          <provider editor-type-id="JavaFX-Scene-Builder">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FXMLLoader.class" pinned="false" current-in-tab="false">
-        <entry file="jar://$APPLICATION_HOME_DIR$/jre64/lib/ext/jfxrt.jar!/javafx/fxml/FXMLLoader.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="101">
-              <caret line="366" column="0" lean-forward="false" selection-start-line="366" selection-start-column="0" selection-end-line="366" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MenuController.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="MenuController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/music/controller/MenuController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="271">
-              <caret line="128" column="0" lean-forward="false" selection-start-line="128" selection-start-column="0" selection-end-line="128" selection-end-column="0" />
+            <state relative-caret-position="3006">
+              <caret line="204" column="76" lean-forward="false" selection-start-line="204" selection-start-column="76" selection-end-line="204" selection-end-column="76" />
               <folding />
             </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="insertionBar.fxml" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/views/insertionBar.fxml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="11" column="321" lean-forward="false" selection-start-line="11" selection-start-column="321" selection-end-line="11" selection-end-column="321" />
-              <folding />
-            </state>
-          </provider>
-          <provider editor-type-id="JavaFX-Scene-Builder">
-            <state />
           </provider>
         </entry>
       </file>
       <file leaf-file-name="InsertionController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/music/controller/InsertionController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="23" column="10" lean-forward="false" selection-start-line="23" selection-start-column="10" selection-end-line="23" selection-end-column="10" />
+            <state relative-caret-position="1854">
+              <caret line="123" column="30" lean-forward="false" selection-start-line="123" selection-start-column="30" selection-end-line="123" selection-end-column="30" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Application.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/Application.java">
+      <file leaf-file-name="Utils.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/music/utils/Utils.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="42" column="18" lean-forward="false" selection-start-line="42" selection-start-column="18" selection-end-line="42" selection-end-column="18" />
+            <state relative-caret-position="1278">
+              <caret line="92" column="48" lean-forward="false" selection-start-line="92" selection-start-column="48" selection-end-line="92" selection-end-column="48" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RegistrationController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/music/controller/RegistrationController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="24" column="13" lean-forward="false" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AbstractModel.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/music/model/AbstractModel.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="16" column="61" lean-forward="false" selection-start-line="16" selection-start-column="61" selection-end-line="16" selection-end-column="61" />
               <folding>
-                <element signature="e#1241#1242#0" expanded="true" />
-                <element signature="e#1291#1292#0" expanded="true" />
+                <element signature="imports" expanded="true" />
+                <element signature="e#247#248#0" expanded="true" />
+                <element signature="e#326#327#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AbstractJavaFXApplication.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/AbstractJavaFXApplication.java">
+      <file leaf-file-name="AlbumEntity.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/music/model/AlbumEntity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
-              <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+            <state relative-caret-position="108">
+              <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SpringFxmlLoader.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/music/configuration/SpringFxmlLoader.java">
+      <file leaf-file-name="ArtistEntity.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/music/model/ArtistEntity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="22" column="9" lean-forward="true" selection-start-line="22" selection-start-column="9" selection-end-line="22" selection-end-column="9" />
+            <state relative-caret-position="108">
+              <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SongEntity.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/music/model/SongEntity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1692">
+              <caret line="122" column="13" lean-forward="true" selection-start-line="122" selection-start-column="13" selection-end-line="122" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GridPaneWrapper.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/music/utils/GridPaneWrapper.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="774">
+              <caret line="65" column="41" lean-forward="false" selection-start-line="65" selection-start-column="41" selection-end-line="65" selection-end-column="41" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -172,14 +269,15 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="AnnotationType" />
+        <option value="FxmlFile" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../fxmlscanner/fxml-scanner-maven-plugin-tutorial" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GradleLocalSettings">
     <option name="externalProjectsViewState">
@@ -189,57 +287,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/music/DAO/GenreDAO.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/music/DAO/SongDAO.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/music/DAO/UserDAO.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/music/DAO/AbstractDAO.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/music/DAO/SongDAOImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/music/DAO/GenreDAOImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/music/DAO/BandDAOImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/music/DAO/ArtistDAOImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/music/DAO/AlbumDAOImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/music/service/UserService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/music/service/AlbumService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/music/service/ArtistService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/music/service/BandService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/music/service/GenreService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/music/service/SongService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/music/service/UserServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/music/service/AlbumServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/music/service/ArtistServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/music/service/BandServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/music/service/GenreServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/music/service/SongServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/music/utils/Utils.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/music/utils/Annotations/Getter.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/music/utils/AnnotationAnalyzer.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/music/utils/Encoder.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/music/model/AbstractModel.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/music/model/Test.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/music/DAO/UserStatusDAO.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/music/DAO/UserStatusDAOImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/music/service/UserStatusService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/music/service/UserStatusServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/music/model/ArtistBandEntity.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/music/controller/RegistrationController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/music/model/UserEntity.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/music/model/SongEntity.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/music/model/GenreEntity.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/music/model/CdHasSongEntity.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/music/model/SongHasAlbumEntity.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/music/model/BandEntity.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/music/model/UserStatusEntity.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/music/model/AlbumEntity.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/music/DAO/UserDAOImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
-        <option value="$PROJECT_DIR$/src/main/java/com/music/controller/MainController.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/music/view/autogen/TableSongView.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/music/model/UserEntity.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/music/service/UserServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/music/DAO/SongAlbumDAO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/music/DAO/SongAlbumImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/music/view/FullSongView.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/music/view/AlbumVersionSongView.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/music/model/BandInfoEntity.java" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/c9940ca3-364d-4cc7-8dd4-85d272291d64/console_1.sql" />
+        <option value="$PROJECT_DIR$/src/main/java/com/music/controller/RegistrationController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/music/utils/StageManager.java" />
         <option value="$PROJECT_DIR$/src/main/resources/views/menu.fxml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/music/configuration/ControllerConfig.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/Application.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/music/view/TableSongView.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/music/model/SongEntity.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/css/combobox.css" />
+        <option value="$PROJECT_DIR$/src/main/java/com/music/controller/MainController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/music/model/UserStatusEntity.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/views/additionalInfoList.fxml" />
+        <option value="$PROJECT_DIR$/src/main/resources/views/sample.fxml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/music/controller/AdditionalInfoController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/music/controller/GenreList.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/music/utils/BoolWrapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/music/utils/Utils.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/views/test.fxml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/music/controller/BandList.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/views/bandList.fxml" />
+        <option value="$PROJECT_DIR$/src/main/resources/views/genreList.fxml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/music/utils/Observer.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/music/utils/Observable.java" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/c9940ca3-364d-4cc7-8dd4-85d272291d64/console.sql" />
         <option value="$PROJECT_DIR$/src/main/java/com/music/configuration/SpringFxmlLoader.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/AbstractJavaFXApplication.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/music/controller/MenuController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/music/DAO/SongDAO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/music/service/SongService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/music/service/SongServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/music/DAO/SongDAOImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/music/DAO/AbstractDAO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/music/controller/AbstractController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/music/utils/ModelDispatcher.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/music/model/Test.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/music/utils/BandObserver.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/music/controller/BandListController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/music/utils/GenreObserver.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/music/controller/GenreListController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/music/controller/InsertionController.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/views/insertionBar.fxml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/music/model/AbstractModel.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/music/utils/GridPaneWrapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/music/controller/MenuController.java" />
       </list>
     </option>
   </component>
@@ -284,11 +382,11 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="61" />
-    <option name="y" value="24" />
-    <option name="width" value="1303" />
-    <option name="height" value="736" />
+    <option name="y" value="-4" />
+    <option name="width" value="1366" />
+    <option name="height" value="772" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
       <flattenPackages />
@@ -304,8 +402,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -373,7 +470,65 @@
               <item name="infosys" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="music" type="462c0819:PsiDirectoryNode" />
+              <item name="DAO" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="infosys" type="b2602c69:ProjectViewProjectNode" />
+              <item name="infosys" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="music" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="infosys" type="b2602c69:ProjectViewProjectNode" />
+              <item name="infosys" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="music" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="infosys" type="b2602c69:ProjectViewProjectNode" />
+              <item name="infosys" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="music" type="462c0819:PsiDirectoryNode" />
+              <item name="utils" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="infosys" type="b2602c69:ProjectViewProjectNode" />
+              <item name="infosys" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="music" type="462c0819:PsiDirectoryNode" />
+              <item name="view" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="infosys" type="b2602c69:ProjectViewProjectNode" />
+              <item name="infosys" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="infosys" type="b2602c69:ProjectViewProjectNode" />
+              <item name="infosys" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="infosys" type="b2602c69:ProjectViewProjectNode" />
@@ -383,62 +538,45 @@
               <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="infosys" type="b2602c69:ProjectViewProjectNode" />
-              <item name="infosys" type="462c0819:PsiDirectoryNode" />
-              <item name="target" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="infosys" type="b2602c69:ProjectViewProjectNode" />
-              <item name="infosys" type="462c0819:PsiDirectoryNode" />
-              <item name="target" type="462c0819:PsiDirectoryNode" />
-              <item name="classes" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="infosys" type="b2602c69:ProjectViewProjectNode" />
-              <item name="infosys" type="462c0819:PsiDirectoryNode" />
-              <item name="target" type="462c0819:PsiDirectoryNode" />
-              <item name="classes" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="infosys" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="AndroidView" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.36666667" />
-    <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.importing" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../fxmlscanner/fxml-scanner-maven-plugin-tutorial" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.build.tools" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../ard/arduino1/arduino" />
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="MySQL" />
     <property name="JPA.DatabaseSchemaImportDialog" value="c9940ca3-364d-4cc7-8dd4-85d272291d64" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/main/java/com/music/controller" />
+    <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/resources/views" />
+      <recent name="$PROJECT_DIR$/src/main/java/com" />
+      <recent name="$PROJECT_DIR$/src/main/java/com/music" />
+      <recent name="$PROJECT_DIR$/src/main/java/com/music/view/" />
+      <recent name="$PROJECT_DIR$/src/main/resources/fxml" />
+    </key>
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.music.model" />
     </key>
     <key name="ImportMappingsDialog.RecentPackages">
       <recent name="com.music.model" />
       <recent name="" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/main/java/com" />
-      <recent name="$PROJECT_DIR$/src/main/java/com/music" />
-      <recent name="$PROJECT_DIR$/src/main/java/com/music/view/" />
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources/css" />
+      <recent name="$PROJECT_DIR$/src/main/java/com/music/controller" />
       <recent name="$PROJECT_DIR$/src/main/resources/views" />
-      <recent name="$PROJECT_DIR$/src/main/resources/fxml" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -581,83 +719,93 @@
       <workItem from="1508267203440" duration="13619000" />
       <workItem from="1508318713118" duration="9165000" />
       <workItem from="1508424360332" duration="15349000" />
+      <workItem from="1508574345836" duration="258000" />
+      <workItem from="1508578439232" duration="21152000" />
+      <workItem from="1508782014536" duration="3280000" />
+      <workItem from="1508852258648" duration="24324000" />
+      <workItem from="1509129884002" duration="19894000" />
+      <workItem from="1509528217298" duration="4136000" />
+      <workItem from="1509640452011" duration="10046000" />
+      <workItem from="1509699260997" duration="2000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="38133000" />
+    <option name="totallyTimeSpent" value="121225000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="61" y="24" width="1368" height="780" extended-state="6" />
-    <editor active="true" />
+    <frame x="-1" y="-11" width="1368" height="780" extended-state="6" />
     <layout>
+      <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22348484" sideWeight="0.36658934" order="5" side_tool="true" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23409091" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2159091" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32868218" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32868218" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32954547" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32868218" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23712121" sideWeight="0.50808316" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22348484" sideWeight="0.49191687" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23409091" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2159091" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39968896" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3281493" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32970452" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32868218" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3281493" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32954547" sideWeight="0.5" order="11" side_tool="true" content_ui="tabs" />
+      <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32868218" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32970452" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23484848" sideWeight="0.6334107" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3281493" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22348484" sideWeight="0.5181347" order="6" side_tool="true" content_ui="tabs" />
     </layout>
     <layout-to-restore>
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23409091" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23409091" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2159091" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2159091" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39968896" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32868218" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3281493" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32970452" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32868218" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32868218" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23712121" sideWeight="0.50808316" order="6" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22348484" sideWeight="0.49191687" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32868218" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3281493" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32954547" sideWeight="0.5" order="11" side_tool="true" content_ui="tabs" />
+      <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32868218" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22348484" sideWeight="0.36658934" order="5" side_tool="true" content_ui="tabs" />
+      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32970452" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23484848" sideWeight="0.6334107" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3281493" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22348484" sideWeight="0.5181347" order="6" side_tool="true" content_ui="tabs" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -670,437 +818,111 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/music/controller/MainController.java</url>
-          <line>78</line>
-          <properties />
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/music/controller/MainController.java</url>
-          <line>75</line>
-          <properties />
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/AbstractJavaFXApplication.java</url>
-          <line>27</line>
-          <properties />
-          <option name="timeStamp" value="6" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/AbstractJavaFXApplication.java</url>
-          <line>28</line>
+          <line>35</line>
           <properties />
           <option name="timeStamp" value="7" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/music/controller/RegistrationController.java</url>
+          <line>75</line>
+          <properties />
+          <option name="timeStamp" value="19" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/music/controller/GenreListController.java</url>
+          <line>91</line>
+          <properties />
+          <option name="timeStamp" value="33" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/music/controller/MenuController.java</url>
+          <line>213</line>
+          <properties />
+          <option name="timeStamp" value="36" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="8" />
+      <option name="time" value="37" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="das://table:/eb5b63b7/c9940ca3-364d-4cc7-8dd4-85d272291d64/mydb.user1">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://table:/eb5b63b7/c9940ca3-364d-4cc7-8dd4-85d272291d64/mydb.user">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://table:/eb5b63b7/c9940ca3-364d-4cc7-8dd4-85d272291d64/mydb.song_has_album">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://table:/eb5b63b7/c9940ca3-364d-4cc7-8dd4-85d272291d64/mydb.user">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://table:/eb5b63b7/c9940ca3-364d-4cc7-8dd4-85d272291d64/mydb.user">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://table:/eb5b63b7/c9940ca3-364d-4cc7-8dd4-85d272291d64/mydb.user">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://table:/eb5b63b7/c9940ca3-364d-4cc7-8dd4-85d272291d64/mydb.USER_STATUS">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://table:/eb5b63b7/c9940ca3-364d-4cc7-8dd4-85d272291d64/mydb.user">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://table:/eb5b63b7/c9940ca3-364d-4cc7-8dd4-85d272291d64/mydb.user">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://table:/eb5b63b7/c9940ca3-364d-4cc7-8dd4-85d272291d64/mydb.user">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://table:/eb5b63b7/c9940ca3-364d-4cc7-8dd4-85d272291d64/mydb.user">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://table:/eb5b63b7/c9940ca3-364d-4cc7-8dd4-85d272291d64/mydb.user_status">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://table:/eb5b63b7/c9940ca3-364d-4cc7-8dd4-85d272291d64/mydb.user">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://table:/eb5b63b7/c9940ca3-364d-4cc7-8dd4-85d272291d64/mydb.1">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://table:/eb5b63b7/c9940ca3-364d-4cc7-8dd4-85d272291d64/mydb.user_status">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://table:/eb5b63b7/c9940ca3-364d-4cc7-8dd4-85d272291d64/mydb.user_status">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://table:/eb5b63b7/c9940ca3-364d-4cc7-8dd4-85d272291d64/mydb.user_status">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://table:/eb5b63b7/c9940ca3-364d-4cc7-8dd4-85d272291d64/mydb.user_status">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-aop/4.3.7.RELEASE/spring-aop-4.3.7.RELEASE.jar!/org/springframework/aop/framework/JdkDynamicAopProxy.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="101">
-          <caret line="134" column="0" lean-forward="false" selection-start-line="134" selection-start-column="0" selection-end-line="134" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/music/service/UserStatusServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="17" column="46" lean-forward="false" selection-start-line="17" selection-start-column="46" selection-end-line="17" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://table:/eb5b63b7/c9940ca3-364d-4cc7-8dd4-85d272291d64/mydb.user">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://table:/eb5b63b7/c9940ca3-364d-4cc7-8dd4-85d272291d64/mydb.user">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://table:/eb5b63b7/c9940ca3-364d-4cc7-8dd4-85d272291d64/mydb.user">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/music/model/SongEntity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="702">
-          <caret line="58" column="41" lean-forward="false" selection-start-line="58" selection-start-column="41" selection-end-line="58" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://table:/eb5b63b7/c9940ca3-364d-4cc7-8dd4-85d272291d64/mydb.user">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://table:/eb5b63b7/c9940ca3-364d-4cc7-8dd4-85d272291d64/mydb.SONG_has_ALBUM">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/music/model/UserStatusEntity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-324">
-          <caret line="6" column="44" lean-forward="false" selection-start-line="6" selection-start-column="44" selection-end-line="6" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/music/service/UserServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="13" column="13" lean-forward="false" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/music/model/AlbumEntity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="38" lean-forward="false" selection-start-line="6" selection-start-column="38" selection-end-line="6" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/music/DAO/UserStatusDAOImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="11" column="48" lean-forward="false" selection-start-line="11" selection-start-column="48" selection-end-line="11" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/music/DAO/UserDAOImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="30" column="0" lean-forward="false" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#973#974#0" expanded="false" />
-            <marker date="1508325260243" expanded="true" signature="1074:1086" ph="DELETE FROM " />
-            <marker date="1508325260243" expanded="true" signature="1074:1105" ph="DELETE FROM " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/music/DAO/AbstractDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="38" column="0" lean-forward="false" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
-          <folding>
-            <element signature="e#744#745#0" expanded="false" />
-            <element signature="e#788#789#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/music/model/UserEntity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="5" column="38" lean-forward="false" selection-start-line="5" selection-start-column="38" selection-end-line="5" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/music/configuration/DBConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="16" column="13" lean-forward="false" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="223">
-          <caret line="90" column="32" lean-forward="false" selection-start-line="90" selection-start-column="32" selection-end-line="91" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/music/view/autogen/FxmlEnum.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="12" lean-forward="false" selection-start-line="6" selection-start-column="12" selection-end-line="6" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/music/controller/AbstractController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="11" column="22" lean-forward="false" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/music/utils/StageManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/sample.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/music/configuration/ControllerConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="41" column="0" lean-forward="false" selection-start-line="41" selection-start-column="2" selection-end-line="45" selection-end-column="7" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2448#2449#0" expanded="true" />
-            <element signature="e#2500#2501#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/views/menu.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1150">
-          <caret line="2" column="41" lean-forward="false" selection-start-line="2" selection-start-column="41" selection-end-line="2" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-    </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/jre64/lib/ext/jfxrt.jar!/javafx/util/Callback.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="9" column="6" lean-forward="false" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/jre64/lib/ext/jfxrt.jar!/javafx/fxml/FXMLLoader.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="101">
-          <caret line="366" column="0" lean-forward="false" selection-start-line="366" selection-start-column="0" selection-end-line="366" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/music/controller/MainController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="558">
-          <caret line="68" column="0" lean-forward="false" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/music/configuration/SpringFxmlLoader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="22" column="9" lean-forward="true" selection-start-line="22" selection-start-column="9" selection-end-line="22" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/Application.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="42" column="18" lean-forward="false" selection-start-line="42" selection-start-column="18" selection-end-line="42" selection-end-column="18" />
-          <folding>
-            <element signature="e#1241#1242#0" expanded="true" />
-            <element signature="e#1291#1292#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/AbstractJavaFXApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/music/controller/MenuController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="271">
-          <caret line="128" column="0" lean-forward="false" selection-start-line="128" selection-start-column="0" selection-end-line="128" selection-end-column="0" />
+        <state relative-caret-position="3006">
+          <caret line="204" column="76" lean-forward="false" selection-start-line="204" selection-start-column="76" selection-end-line="204" selection-end-column="76" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/music/controller/InsertionController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="23" column="10" lean-forward="false" selection-start-line="23" selection-start-column="10" selection-end-line="23" selection-end-column="10" />
+        <state relative-caret-position="1854">
+          <caret line="123" column="30" lean-forward="false" selection-start-line="123" selection-start-column="30" selection-end-line="123" selection-end-column="30" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/views/insertionBar.fxml">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/music/utils/Utils.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="11" column="321" lean-forward="false" selection-start-line="11" selection-start-column="321" selection-end-line="11" selection-end-column="321" />
+        <state relative-caret-position="1278">
+          <caret line="92" column="48" lean-forward="false" selection-start-line="92" selection-start-column="48" selection-end-line="92" selection-end-column="48" />
           <folding />
         </state>
       </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/music/controller/RegistrationController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="24" column="13" lean-forward="false" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/music/model/AbstractModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="16" column="61" lean-forward="false" selection-start-line="16" selection-start-column="61" selection-end-line="16" selection-end-column="61" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#247#248#0" expanded="true" />
+            <element signature="e#326#327#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/music/model/AlbumEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/music/model/ArtistEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/music/model/SongEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1692">
+          <caret line="122" column="13" lean-forward="true" selection-start-line="122" selection-start-column="13" selection-end-line="122" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/music/utils/GridPaneWrapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="774">
+          <caret line="65" column="41" lean-forward="false" selection-start-line="65" selection-start-column="41" selection-end-line="65" selection-end-column="41" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
       </provider>
     </entry>
   </component>
@@ -1155,12 +977,11 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>infosys</last-edited>
+          <last-edited>Hibernate|infosys</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
                 <option value="0.36666667" />
-                <option value="0.6" />
               </list>
             </option>
           </splitter-proportions>

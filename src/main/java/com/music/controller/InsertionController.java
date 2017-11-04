@@ -1,7 +1,9 @@
 package com.music.controller;
 
 import com.jfoenix.controls.JFXButton;
+import com.jfoenix.controls.JFXTextField;
 import com.music.model.*;
+import javafx.beans.InvalidationListener;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -22,7 +24,7 @@ import java.util.ResourceBundle;
 
 
 @Component
-public class InsertionController extends AbstractController implements Initializable {
+public class InsertionController extends AbstractController implements Initializable, BandObserver, GenreObserver {
     @FXML
     private VBox slideBox;
 
@@ -31,6 +33,10 @@ public class InsertionController extends AbstractController implements Initializ
 
     @FXML
     private GridPane insertionPane;
+    private GridPaneWrapper pane = new GridPaneWrapper();
+
+    private BandListController bandListController;
+    private GenreListController genreListController;
 
     @FXML
     private JFXButton addButton;
@@ -50,17 +56,25 @@ public class InsertionController extends AbstractController implements Initializ
 
     @FXML
     void addModel(ActionEvent event) {
-        //persistenceService.setStrategy(modelDispatcher.dispatch(model));
-       // persistenceService.persist(model);
+
+        int i=0;
+        ObservableList<Node> list = pane.getPane().getChildren();
+        for(Node n: list){
+
+            System.out.println(((JFXTextField)n).getText() + " ->"+i);
+            i++;
+        }
+        //System.out.println((JFXTextField)(pane.getPane().g));
+
+       // ((SongEntity)model).setName(list.get(4));
+
     }
 
     @FXML
     void choseItem(ActionEvent event) {
-        insertionPane.getChildren().clear();
+        pane.clear();
         model = comboBox.getSelectionModel().getSelectedItem();
-        Utils.adjustConstraints(insertionPane, model);
-        Utils.adjustGrid(insertionPane, 2, model.getClass().getDeclaredFields().length);
-        Utils.setTextFieldsData(insertionPane,model);
+        pane.printModelInfo(model);
     }
 
     void prepareGrid(VBox box) {
@@ -77,11 +91,41 @@ public class InsertionController extends AbstractController implements Initializ
         modelList.setItems(list);
         //modelList.setItems(list);
         // modelList.set
+        bandListController = (BandListController) stageManager.getLoader().getController("../views/bandList.fxml");
+        bandListController.registerObserver(this);
+        genreListController = (GenreListController) stageManager.getLoader().getController("../views/genreList.fxml");
+        genreListController.registerObserver(this);
     }
 
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        pane.setActive(true);
+        pane.setPane(insertionPane);
         initModelList(comboBox);
+    }
+
+    @Override
+    public void update(AbstractModel model) {
+    }
+
+    @Override
+    public void updateBand(BandEntity bandEntity) {
+        if (pane.isActive()) {
+            pane.invalidateStringFields(model);
+            ((SongEntity) this.model).setBand(bandEntity);
+            pane.clear();
+            pane.printModelInfo(this.model);
+        }
+    }
+
+    @Override
+    public void updateGenre(GenreEntity genreEntity) {
+        if (pane.isActive()) {
+            pane.invalidateStringFields(this.model);
+            ((SongEntity) this.model).setGenre(genreEntity);
+            pane.clear();
+            pane.printModelInfo(this.model);
+        }
     }
 }

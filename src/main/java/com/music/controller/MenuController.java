@@ -9,9 +9,7 @@ import com.jfoenix.controls.JFXHamburger;
 import com.jfoenix.transitions.hamburger.HamburgerBackArrowBasicTransition;
 import com.music.configuration.ControllerConfig;
 import com.music.configuration.SpringFxmlLoader;
-import com.music.model.AbstractModel;
-import com.music.model.SongEntity;
-import com.music.model.Test;
+import com.music.model.*;
 import com.music.service.SongService;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -41,12 +39,16 @@ import java.util.List;
 import java.util.ResourceBundle;
 
 @Component
-public class MenuController implements Initializable {
+public class MenuController extends AbstractController implements Initializable, BandObserver, GenreObserver {
 
     ObservableList<SongEntity> songList = FXCollections.observableArrayList();
-    ObservableList<AbstractModel> modelList =  FXCollections.observableArrayList();
+    ObservableList<AbstractModel> modelList = FXCollections.observableArrayList();
 
     private boolean sideGridPaneIsEmpty;
+
+    private BandListController bandListController;
+    private GenreListController genreListController;
+    private boolean gridaPaneActive;
 
     @FXML
     private AnchorPane mainPane;
@@ -85,9 +87,9 @@ public class MenuController implements Initializable {
 
     @FXML
     private TableColumn<SongEntity, Integer> genreCol;
-
-    @FXML
-    private TableColumn<SongEntity, Integer> albumCol;
+//
+//    @FXML
+//    private TableColumn<SongEntity, Integer> albumCol;
 
     @FXML
     private JFXHamburger insertionHamberger;
@@ -113,7 +115,7 @@ public class MenuController implements Initializable {
 
     private AbstractModel model;
 
-    private SpringFxmlLoader loader = new SpringFxmlLoader();
+    private GridPaneWrapper paneWrapper = new GridPaneWrapper();
 
 //    DatabaseHandler handler;
 //    Printer printer = new Printer();
@@ -121,83 +123,60 @@ public class MenuController implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        //handler = DatabaseHandler.getInstance();
-        //songDAO = new SongDAO();
+        bandListController = (BandListController) stageManager.getLoader().getController("../views/bandList.fxml");
+        bandListController.registerObserver(this);
+        genreListController = (GenreListController) stageManager.getLoader().getController("../views/genreList.fxml");
+        genreListController.registerObserver(this);
+        paneWrapper.setPane(gridPane);
+        paneWrapper.setActive(true);
         initCol();
         loadData();
         startShowGridPane();
+        VBox box = (VBox) stageManager.getLoader().load("../views/insertionBar.fxml");
+        insertionDrawer.setSidePane(box);
+        HamburgerBackArrowBasicTransition burgerTask = new HamburgerBackArrowBasicTransition(insertionHamberger);
+        burgerTask.setRate(-1);
+        insertionHamberger.addEventHandler(MouseEvent.MOUSE_PRESSED, (e) -> {
+            burgerTask.setRate(burgerTask.getRate() * -1);
+            burgerTask.play();
 
+            if (insertionDrawer.isShown()) {
+                insertionDrawer.close();
+                paneWrapper.setActive(true);
+            } else {
+                insertionDrawer.open();
+                paneWrapper.setActive(false);
+            }
 
-
-
-            VBox box = (VBox) loader.load("../views/insertionBar.fxml", Application.context);
-
-            insertionDrawer.setSidePane(box);
-            //CprepareGrid(box);
-
-
-            HamburgerBackArrowBasicTransition burgerTask = new HamburgerBackArrowBasicTransition(insertionHamberger);
-            burgerTask.setRate(-1);
-            insertionHamberger.addEventHandler(MouseEvent.MOUSE_PRESSED, (e) -> {
-                burgerTask.setRate(burgerTask.getRate() * -1);
-                burgerTask.play();
-
-                if (insertionDrawer.isShown())
-                    insertionDrawer.close();
-                else
-                    insertionDrawer.open();
-
-            });
-
-
-
+        });
     }
 
     private void initCol() {
         songNameCol.setCellValueFactory(new PropertyValueFactory<>("name"));
         authorCol.setCellValueFactory(new PropertyValueFactory<>("band"));
         genreCol.setCellValueFactory(new PropertyValueFactory<>("genre"));
-        albumCol.setCellValueFactory(new PropertyValueFactory<>("albums"));
+        //albumCol.setCellValueFactory(new PropertyValueFactory<>("albums"));
     }
 
     private void loadData() {
-           try {
-               List<SongEntity> songs = songService.findAll();
-               for (SongEntity s : songs) {
-                   songList.add(s);
-               }
-               songTable.getItems().setAll(songList);
-           }
-           catch (NullPointerException e){
-
-           }
+        List<SongEntity> songs = songService.findAll();
+        for (SongEntity s : songs) {
+            songList.add(s);
+        }
+        songTable.getItems().setAll(songList);
     }
 
 
     private void startShowGridPane() {
-        gridPane.getChildren().clear();
-        Utils.adjustConstraints(gridPane, new Test());
-        Utils.adjustGrid(gridPane, 1, 1);
-        //printer.setStrategy(new LogoPringStrategy());
-        //printer.print(gridPane, null);
-
+        paneWrapper.clear();
+        paneWrapper.printLogo();
     }
 
     @FXML
     void printRowInfo(MouseEvent event) {
         model = songTable.getSelectionModel().getSelectedItem();
-        gridPane.getChildren().clear();
-        Utils.adjustConstraints(gridPane, model);
-        Utils.adjustGrid(gridPane, 2, 4);
-        //printer.setStrategy(new SongPrintStrategy());
-        //printer.print(gridPane, model);
-
-    }
-
-    private void setColWidth(int index, double width) {
-        ColumnConstraints col1 = new ColumnConstraints();
-        col1.setPrefWidth(width);
-        gridPane.getColumnConstraints().set(index, col1);
+        paneWrapper.clear();
+        paneWrapper.printModelInfo(model);
     }
 
     @FXML
@@ -217,7 +196,37 @@ public class MenuController implements Initializable {
 
     @FXML
     void editFields(ActionEvent event) {
-        startShowGridPane();
+
+        System.out.println("test");
+        //startShowGridPane();
+        songService.update((SongEntity) model);
+
+    }
+    //TODO: utils class transfer some methods to pane wrapper, add insertion
+
+    @Override
+    public void update(AbstractModel model) {
+
+    }
+
+    @Override
+    public void updateBand(BandEntity bandEntity) {
+        if (paneWrapper.isActive()) {
+            paneWrapper.invalidateStringFields(this.model);
+            ((SongEntity) this.model).setBand(bandEntity);
+            paneWrapper.clear();
+            paneWrapper.printModelInfo(this.model);
+        }
+    }
+
+    @Override
+    public void updateGenre(GenreEntity genreEntity) {
+        if (paneWrapper.isActive()) {
+            ((SongEntity) this.model).setGenre(genreEntity);
+            paneWrapper.invalidateStringFields(this.model);
+            paneWrapper.clear();
+            paneWrapper.printModelInfo(this.model);
+        }
     }
 //
 //    void prepareGrid(VBox box){

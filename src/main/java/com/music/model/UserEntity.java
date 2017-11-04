@@ -9,7 +9,7 @@ public class UserEntity {
     private int id;
     private String login;
     private String password;
-    private UserStatusEntity status;
+    private UserStatusEntity userStatus;
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -44,12 +44,12 @@ public class UserEntity {
 
     @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "status_id")
-    public UserStatusEntity getStatus() {
-        return status;
+    public UserStatusEntity getUserStatus() {
+        return userStatus;
     }
 
-    public void setStatus(UserStatusEntity status) {
-        this.status = status;
+    public void setUserStatus(UserStatusEntity status) {
+        this.userStatus = status;
     }
 
     @Override

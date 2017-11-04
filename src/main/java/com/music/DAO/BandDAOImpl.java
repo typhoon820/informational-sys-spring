@@ -32,7 +32,7 @@ public class BandDAOImpl extends AbstractDAO<Integer, BandEntity> implements Ban
 
     @Override
     public void delete(int id) {
-        Query query = getSession().createSQLQuery("DELETE FROM BAND WHERE id = :id");
+        Query query = getSession().createSQLQuery("DELETE FROM band WHERE id = :id");
         query.setInteger("id", id);
         query.executeUpdate();
     }

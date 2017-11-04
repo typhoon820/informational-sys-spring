@@ -32,7 +32,7 @@ public class AlbumDAOImpl extends AbstractDAO<Integer, AlbumEntity> implements A
 
     @Override
     public void delete(int id) {
-        Query query = getSession().createSQLQuery("DELETE FROM ALBUM WHERE id = :id");
+        Query query = getSession().createSQLQuery("DELETE FROM album WHERE id = :id");
         query.setInteger("id", id);
         query.executeUpdate();
     }

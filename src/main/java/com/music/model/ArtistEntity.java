@@ -1,14 +1,34 @@
 package com.music.model;
 
+import com.music.utils.Annotations.Getter;
+
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
-@Table(name = "ARTIST", schema = "mydb", catalog = "")
+@Table(name = "artist", schema = "mydb")
 public class ArtistEntity extends AbstractModel {
     private int id;
     private String firstname;
     private String lastname;
     private String specialization;
+    private List<BandEntity> bands = new ArrayList<>();
+
+
+    @ManyToMany(cascade = {CascadeType.PERSIST,
+            CascadeType.MERGE})
+    @JoinTable(name = "artist_band",
+            joinColumns = @JoinColumn(name = "artist_id"),
+            inverseJoinColumns = @JoinColumn(name = "author_id"))
+    public List<BandEntity> getCurrentArtists() {
+        return bands;
+    }
+
+    public void setCurrentArtists(List<BandEntity> bands) {
+        this.bands = bands;
+    }
+
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -74,5 +94,36 @@ public class ArtistEntity extends AbstractModel {
         result = 31 * result + (lastname != null ? lastname.hashCode() : 0);
         result = 31 * result + (specialization != null ? specialization.hashCode() : 0);
         return result;
+    }
+
+
+    @Transient
+    @Getter(num = 1)
+    public String getN(){
+        return firstname;
+    }
+
+    @Transient
+    @Getter(num = 2)
+    public String getL(){
+        return lastname;
+    }
+
+
+    @Transient
+    @Getter(num = 3)
+    public String getSp(){
+        return specialization;
+    }
+    @Transient
+    @Getter(num = 4)
+    public List<String> getB(){
+        List<String> res = new ArrayList<>();
+        if (bands.size()!=0) {
+            for (BandEntity b : bands) {
+                res.add(b.getName());
+            }
+        }
+        return res;
     }
 }

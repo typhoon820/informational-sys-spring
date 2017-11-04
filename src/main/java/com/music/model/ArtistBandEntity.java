@@ -4,7 +4,7 @@ import javax.persistence.*;
 import java.util.Date;
 
 @Entity
-@Table(name = "ARTIST_BAND", schema = "mydb")
+@Table(name = "artist_band", schema = "mydb")
 public class ArtistBandEntity {
     private ArtistEntity artistId;
     private BandEntity authorId;

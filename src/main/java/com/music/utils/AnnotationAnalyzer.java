@@ -11,7 +11,7 @@ import java.util.List;
 public class AnnotationAnalyzer {
     public static List<Method> findGetters(AbstractModel model) throws Exception {
         List<Method> result = new ArrayList<Method>(10);
-        Method res[] = new Method[model.getClass().getDeclaredFields().length];
+        Method res[] = new Method[model.getClass().getDeclaredFields().length-1];
         Method methods[] = model.getClass().getMethods();
         for (Method method: methods){
             if(method.isAnnotationPresent(Getter.class)){

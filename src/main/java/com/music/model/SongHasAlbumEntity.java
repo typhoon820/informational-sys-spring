@@ -3,7 +3,7 @@ package com.music.model;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "SONG_has_ALBUM", schema = "mydb", catalog = "")
+@Table(name = "song_has_album", schema = "mydb")
 public class SongHasAlbumEntity {
     private int songId;
     private int albumId;

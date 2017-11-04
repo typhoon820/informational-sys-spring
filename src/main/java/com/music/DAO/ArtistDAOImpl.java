@@ -32,7 +32,7 @@ public class ArtistDAOImpl extends AbstractDAO<Integer, ArtistEntity> implements
 
     @Override
     public void delete(int id) {
-        Query query = getSession().createSQLQuery("DELETE FROM ARTIST WHERE id = :id");
+        Query query = getSession().createSQLQuery("DELETE FROM artist WHERE id = :id");
         query.setInteger("id", id);
         query.executeUpdate();
     }

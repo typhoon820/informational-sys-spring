@@ -1,7 +1,9 @@
 package com.music.service;
 
 import com.music.DAO.UserDAO;
+import com.music.DAO.UserStatusDAO;
 import com.music.model.UserEntity;
+import com.music.model.UserStatusEntity;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -15,6 +17,8 @@ public class UserServiceImpl implements UserService {
 
     @Autowired
     private UserDAO userDAO;
+    @Autowired
+    UserStatusDAO statusDAO;
 
     @Override
     public UserEntity findById(int id) {
@@ -28,6 +32,8 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public void save(UserEntity user) {
+        UserStatusEntity ustat = statusDAO.findByName("User");
+        user.setUserStatus(ustat);
         userDAO.save(user);
     }
 

@@ -14,13 +14,16 @@ import javafx.stage.Stage;
 
 import com.music.utils.*;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
 import javax.xml.ws.soap.Addressing;
+import java.lang.reflect.Field;
 import java.net.URL;
 import java.sql.SQLException;
 import java.util.List;
 import java.util.ResourceBundle;
 
+@Component
 public class MainController extends AbstractController implements Initializable {
 
 
@@ -59,7 +62,7 @@ public class MainController extends AbstractController implements Initializable 
     @FXML
     void cancel(ActionEvent event) {
         closeStage();
-        loadView("/sample/view/registration.fxml", false, "Registration");
+        stageManager.showStage("../views/registration.fxml", false, "Registration");
     }
 
 
@@ -78,6 +81,10 @@ public class MainController extends AbstractController implements Initializable 
         UserEntity loggingInUser = userService.findByName(tLogin);
         List<UserEntity> list = userService.findAll();
         System.out.println(tLogin + "   "+loggingInUser.getLogin());
+        Field[] f = loggingInUser.getClass().getDeclaredFields();
+        for (Field fl:f){
+            System.out.println(Utils.isFieldNonCollectionObject(fl));
+        }
         if (loggingInUser == null){
             if (Utils.showWarningAlert("No user with such login").get() == ButtonType.OK) {
                 login.setText("");
@@ -90,13 +97,15 @@ public class MainController extends AbstractController implements Initializable 
         if (encoder.getMethods().checkPassword(password.getText(), loggingInUser.getPassword())) {
             closeStage();
             // System.out.println();
-            loadView("/main/resources/views/menu.fxml", true, "Menu");
+            stageManager.showStage("../views/menu.fxml", true, "Menu");
         } else {
             if (Utils.showWarningAlert("Password is incorrect").get() == ButtonType.OK) {
                 login.setText("");
                 password.setText("");
             }
         }
+
+
     }
 
     private void closeStage() {

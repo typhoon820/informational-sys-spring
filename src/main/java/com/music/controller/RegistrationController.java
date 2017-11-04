@@ -16,11 +16,12 @@ import javafx.stage.Stage;
 
 import com.music.utils.*;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
 import java.net.URL;
-import java.sql.SQLException;
 import java.util.ResourceBundle;
 
+@Component
 public class RegistrationController extends AbstractController implements Initializable {
 
     //private DatabaseHandler handler;
@@ -62,30 +63,34 @@ public class RegistrationController extends AbstractController implements Initia
 
     @FXML
     void cancel(ActionEvent event) {
-
+        closeStage();
+        stageManager.showStage("../views/sample.fxml", false, "login");
     }
 
     @FXML
     void register(ActionEvent event) {
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
 
-        if (userDAO.findByName(login.getText()) != null)
+        System.out.println("===================" + userDAO.findByName(login.getText()));
+
+        if (userDAO.findByName(login.getText()) != null) {
             if (Utils.showWarningAlert("Login is already in use").get() == ButtonType.OK) {
                 login.setText("");
                 password.setText("");
                 repeatedPassword.setText("");
             }
-
+        }
         else {
             if (password.getText().equals(repeatedPassword.getText())) {
                 UserEntity user = new UserEntity();
+                //user.setId(20);
                 user.setLogin(login.getText());
                 user.setPassword(encoder.getMethods().encryptPassword(password.getText()));
-                user.setStatus(statusService.findByName("User"));
+               // user.setUserStatus(statusService.findByName("User"));
                 userDAO.save(user);
                 if (Utils.showSuccessAlert("You have been registered successfully").get() == ButtonType.OK){
                     closeStage();
-                    loadView("/sample/view/sample.fxml", false, "login");
+                    stageManager.showStage("../views/sample.fxml", false, "login");
                 }
 
             } else {

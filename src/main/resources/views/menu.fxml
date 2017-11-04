@@ -27,7 +27,6 @@
                       <TableColumn fx:id="songNameCol" minWidth="164.5" prefWidth="75.0" text="Song Name" />
                       <TableColumn fx:id="authorCol" minWidth="164.5" prefWidth="-1.0" text="Author" />
                         <TableColumn fx:id="genreCol" minWidth="164.5" prefWidth="75.0" text="Genre" />
-                        <TableColumn fx:id="albumCol" minWidth="164.5" prefWidth="75.0" text="Album" />
 
 
                     </columns>
@@ -69,7 +68,7 @@
               </rowConstraints>
             </GridPane>
             <JFXDrawer fx:id="insertionDrawer" defaultDrawerSize="380.0" direction="RIGHT" maxWidth="320.0" prefWidth="360.0" AnchorPane.rightAnchor="0.0" />
-            <JFXHamburger fx:id="insertionHamberger" layoutX="312.0" layoutY="14.0" stylesheets="@../css/buttonstyle.css" />
+            <JFXHamburger fx:id="insertionHamberger" layoutX="312.0" layoutY="14.0" stylesheets="@/css/buttonstyle.css" />
          </children>
       </AnchorPane>
    </children>
