@@ -55,7 +55,7 @@ public class SpringFxmlLoader {
     public Object load(String url){
         initContext();
         try(InputStream fxmlStream = AbstractJavaFXApplication.class.getResourceAsStream(url)){
-            System.err.println(SpringFxmlLoader.class.getResourceAsStream(url));
+            //System.err.println(SpringFxmlLoader.class.getResourceAsStream(url));
             FXMLLoader loader = new FXMLLoader();
             loader.setControllerFactory(clazz -> this.context.getBean(clazz));
             return loader.load(fxmlStream);

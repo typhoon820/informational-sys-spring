@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="750.0" style="-fx-background-color: ALICEBLUE;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.music.controller.ArtistsOfBandController">
+    <children>
+        <VBox prefHeight="500.0" prefWidth="600.0" stylesheets="@/css/buttonListTable.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <HBox prefHeight="234.0" prefWidth="750.0">
+                    <children>
+                  <TitledPane animated="false" collapsible="false" prefHeight="241.0" prefWidth="300.0" text="Current crew">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                                    <TableView fx:id="currentArtistsTable" prefHeight="212.0" prefWidth="300.0" style="-fx-border-color: CADETBLUE; -fx-background-color: ALICEBLUE;">
+                                        <columns>
+                                    <TableColumn fx:id="currentArtistFirstNameCol" prefWidth="100.0" text="First name" />
+                                            <TableColumn fx:id="currentArtistLastNameCol" prefWidth="100.0" text="Last name" />
+                                    <TableColumn fx:id="currentArtistSpecCol" prefWidth="100.0" text="Spec" />
+                                        </columns>
+                                    </TableView>
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </TitledPane>
+                  <TitledPane collapsible="false" prefHeight="258.0" prefWidth="450.0" text="Ex-members" textAlignment="CENTER">
+                     <content>
+                              <TableView fx:id="exMembersTable" prefHeight="272.0" prefWidth="451.0" style="-fx-background-color: ALICEBLUE; -fx-border-color: CADETBLUE;">
+                                  <columns>
+                                      <TableColumn fx:id="exFirstNameCol" prefWidth="100.0" text="First name" />
+                              <TableColumn fx:id="exLastNameCol" prefWidth="100.0" text="Last name" />
+                              <TableColumn fx:id="exSpecCol" prefWidth="88.0" text="Spec" />
+                                      <TableColumn fx:id="exFromColumn" text="From" />
+                                      <TableColumn fx:id="exToColumn" minWidth="78.0" prefWidth="78.0" text="To" />
+                                  </columns>
+                              </TableView>
+                     </content>
+                  </TitledPane>
+                    </children>
+                </HBox>
+                <Line endX="750.0" scaleY="2.0" style="-fx-fill: CADETBLUE;" />
+            <TitledPane animated="false" collapsible="false" prefHeight="368.0" prefWidth="751.0" text="Free artists">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: ALICEBLUE;" stylesheets="@../css/buttonListTable.css">
+                     <children>
+                        <TableView fx:id="availableArtistsTable" prefHeight="344.0" prefWidth="500.0" style="-fx-border-color: CADETBLUE; -fx-background-color: ALICEBLUE;">
+                           <columns>
+                              <TableColumn fx:id="availableFirstNameCol" prefWidth="180.0" text="First name" />
+                              <TableColumn fx:id="availableLastNameCol" prefWidth="180.0" text="Last name" />
+                              <TableColumn fx:id="availableSpecCol" prefWidth="140.0" text="Spec" />
+                           </columns>
+                        </TableView>
+                        <VBox layoutX="500.0" prefHeight="341.0" prefWidth="250.0">
+                           <children>
+                              <JFXButton fx:id="addToCrewButton" onAction="#addToBand" prefHeight="39.0" prefWidth="209.0" text="Add to crew">
+                                 <VBox.margin>
+                                    <Insets left="40.0" right="40.0" top="40.0" />
+                                 </VBox.margin>
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </JFXButton>
+                              <JFXButton fx:id="newArtistButton" layoutX="50.0" layoutY="50.0" onAction="#addNewArtist" prefHeight="39.0" prefWidth="209.0" text="+ new artist">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets left="40.0" right="40.0" top="40.0" />
+                                 </VBox.margin>
+                              </JFXButton>
+                           </children>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </TitledPane>
+            </children>
+        </VBox>
+    </children>
+</AnchorPane>

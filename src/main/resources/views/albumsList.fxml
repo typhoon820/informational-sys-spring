@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="350.0" style="-fx-background-color: #2F4F4F;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.music.controller.AlbumListController">
+   <children>
+      <VBox layoutX="14.0" layoutY="14.0" prefHeight="600.0" prefWidth="350.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <TableView fx:id="currentAlbumsTable" onMouseClicked="#deleteClick" prefHeight="255.0" prefWidth="276.0">
+              <columns>
+                <TableColumn fx:id="currentAlbumColumn" prefWidth="200.0" text="Current albums" />
+                  <TableColumn fx:id="versionColumn" prefWidth="149.0" text="Version" />
+              </columns>
+            </TableView>
+            <Label prefHeight="55.0" prefWidth="350.0" text="Drag&amp;Drop to add an album to current ones" textAlignment="CENTER" textFill="ALICEBLUE" wrapText="true">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <TableView fx:id="allAlbumsTable" prefHeight="256.0" prefWidth="350.0">
+              <columns>
+                <TableColumn fx:id="allAlbumColumn" prefWidth="349.0" text="All albums" />
+              </columns>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </TableView>
+            <JFXButton fx:id="addAlbumButton" onAction="#addAlbum" stylesheets="@/css/combobox.css" text="+ new album">
+               <font>
+                  <Font size="16.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="110.0" right="110.0" top="1.0" />
+               </VBox.margin>
+            </JFXButton>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

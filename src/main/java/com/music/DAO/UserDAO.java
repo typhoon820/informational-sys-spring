@@ -1,8 +1,6 @@
 package com.music.DAO;
 
-import com.music.model.AlbumEntity;
-import com.music.model.UserEntity;
-import org.springframework.data.repository.CrudRepository;
+import com.music.entity.UserEntity;
 
 import java.util.List;
 

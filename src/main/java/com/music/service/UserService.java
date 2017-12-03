@@ -1,6 +1,6 @@
 package com.music.service;
 
-import com.music.model.UserEntity;
+import com.music.entity.UserEntity;
 
 import java.util.List;
 

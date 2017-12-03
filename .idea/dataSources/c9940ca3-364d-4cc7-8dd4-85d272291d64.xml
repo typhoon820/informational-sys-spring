@@ -6,373 +6,394 @@
       <Current>1</Current>
       <Visible>1</Visible>
     </schema>
-    <schema id="3" parent="1" name="arduino"/>
-    <schema id="4" parent="1" name="information_schema"/>
-    <schema id="5" parent="1" name="mysql"/>
-    <schema id="6" parent="1" name="performance_schema"/>
-    <schema id="7" parent="1" name="sys"/>
-    <schema id="8" parent="1" name="testschema"/>
-    <table id="9" parent="2" name="album"/>
-    <table id="10" parent="2" name="artist"/>
-    <table id="11" parent="2" name="artist_band"/>
-    <table id="12" parent="2" name="band"/>
-    <table id="13" parent="2" name="cd"/>
-    <table id="14" parent="2" name="cd_has_song"/>
-    <table id="15" parent="2" name="genre"/>
-    <table id="16" parent="2" name="song"/>
-    <table id="17" parent="2" name="song_has_album"/>
-    <table id="18" parent="2" name="user"/>
-    <table id="19" parent="2" name="user_status"/>
-    <view id="20" parent="2" name="BAND_INFO">
-      <Comment>VIEW</Comment>
-    </view>
-    <view id="21" parent="2" name="album_info">
-      <Comment>VIEW</Comment>
-    </view>
-    <view id="22" parent="2" name="song_genre">
-      <Comment>VIEW</Comment>
-    </view>
-    <view id="23" parent="2" name="songs">
-      <Comment>VIEW</Comment>
-    </view>
-    <view id="24" parent="2" name="view_user_status">
-      <Comment>VIEW</Comment>
-    </view>
-    <routine id="25" parent="2" name="SaveNewUser">
-      <RoutineKind>procedure</RoutineKind>
-    </routine>
-    <column id="26" parent="9" name="ID">
+    <schema id="3" parent="1" name="information_schema"/>
+    <schema id="4" parent="1" name="mysql"/>
+    <schema id="5" parent="1" name="performance_schema"/>
+    <schema id="6" parent="1" name="sys"/>
+    <schema id="7" parent="1" name="university"/>
+    <table id="8" parent="2" name="album"/>
+    <table id="9" parent="2" name="artist"/>
+    <table id="10" parent="2" name="artist_band"/>
+    <table id="11" parent="2" name="band"/>
+    <table id="12" parent="2" name="cd"/>
+    <table id="13" parent="2" name="cd_has_song"/>
+    <table id="14" parent="2" name="genre"/>
+    <table id="15" parent="2" name="song"/>
+    <table id="16" parent="2" name="song_has_album"/>
+    <table id="17" parent="2" name="user"/>
+    <table id="18" parent="2" name="user_status"/>
+    <column id="19" parent="8" name="ID">
       <Position>1</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
     </column>
-    <column id="27" parent="9" name="name">
+    <column id="20" parent="8" name="name">
       <Position>2</Position>
       <DataType>varchar(60)|0</DataType>
     </column>
-    <key id="28" parent="9" name="PRIMARY">
+    <key id="21" parent="8" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>ID</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="29" parent="10" name="ID">
+    <column id="22" parent="9" name="ID">
       <Position>1</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
     </column>
-    <column id="30" parent="10" name="firstname">
+    <column id="23" parent="9" name="firstname">
       <Position>2</Position>
       <DataType>varchar(45)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="31" parent="10" name="lastname">
+    <column id="24" parent="9" name="lastname">
       <Position>3</Position>
       <DataType>varchar(45)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="32" parent="10" name="specialization">
+    <column id="25" parent="9" name="specialization">
       <Position>4</Position>
       <DataType>varchar(45)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <key id="33" parent="10" name="PRIMARY">
+    <key id="26" parent="9" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>ID</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="34" parent="11" name="ARTIST_ID">
+    <column id="27" parent="10" name="ARTIST_ID">
       <Position>1</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="35" parent="11" name="AUTHOR_ID">
+    <column id="28" parent="10" name="AUTHOR_ID">
       <Position>2</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="36" parent="11" name="ID">
+    <column id="29" parent="10" name="ID">
       <Position>3</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
     </column>
-    <column id="37" parent="11" name="join_date">
+    <column id="30" parent="10" name="join_date">
       <Position>4</Position>
       <DataType>date|0</DataType>
     </column>
-    <column id="38" parent="11" name="leave_date">
+    <column id="31" parent="10" name="leave_date">
       <Position>5</Position>
       <DataType>date|0</DataType>
     </column>
-    <index id="39" parent="11" name="fk_ARTIST_has_AUTHOR_ARTIST1_idx">
+    <column id="32" parent="10" name="author_id_id">
+      <Position>6</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <index id="33" parent="10" name="fk_ARTIST_has_AUTHOR_ARTIST1_idx">
       <ColNames>ARTIST_ID</ColNames>
     </index>
-    <index id="40" parent="11" name="fk_ARTIST_has_AUTHOR_AUTHOR1_idx">
+    <index id="34" parent="10" name="fk_ARTIST_has_AUTHOR_AUTHOR1_idx">
       <ColNames>AUTHOR_ID</ColNames>
     </index>
-    <key id="41" parent="11" name="PRIMARY">
+    <index id="35" parent="10" name="FKew3dh56251nfcn109o5ise2qk">
+      <ColNames>author_id_id</ColNames>
+    </index>
+    <key id="36" parent="10" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>ID</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="42" parent="11" name="fk_ARTIST_has_AUTHOR_ARTIST1">
+    <foreign-key id="37" parent="10" name="FK8y4y7e91187dbnx9i9k01c6w7">
       <ColNames>ARTIST_ID</ColNames>
       <RefSchemaName>mydb</RefSchemaName>
       <RefTableName>artist</RefTableName>
       <RefColNames>ID</RefColNames>
     </foreign-key>
-    <foreign-key id="43" parent="11" name="fk_ARTIST_has_AUTHOR_AUTHOR1">
+    <foreign-key id="38" parent="10" name="fk_ARTIST_has_AUTHOR_ARTIST1">
+      <ColNames>ARTIST_ID</ColNames>
+      <RefSchemaName>mydb</RefSchemaName>
+      <RefTableName>artist</RefTableName>
+      <RefColNames>ID</RefColNames>
+    </foreign-key>
+    <foreign-key id="39" parent="10" name="FK48bkds80q7o1sqpwokuylcasi">
       <ColNames>AUTHOR_ID</ColNames>
       <RefSchemaName>mydb</RefSchemaName>
       <RefTableName>band</RefTableName>
       <RefColNames>ID</RefColNames>
     </foreign-key>
-    <column id="44" parent="12" name="ID">
+    <foreign-key id="40" parent="10" name="fk_ARTIST_has_AUTHOR_AUTHOR1">
+      <ColNames>AUTHOR_ID</ColNames>
+      <RefSchemaName>mydb</RefSchemaName>
+      <RefTableName>band</RefTableName>
+      <RefColNames>ID</RefColNames>
+    </foreign-key>
+    <foreign-key id="41" parent="10" name="FKew3dh56251nfcn109o5ise2qk">
+      <ColNames>author_id_id</ColNames>
+      <RefSchemaName>mydb</RefSchemaName>
+      <RefTableName>band</RefTableName>
+      <RefColNames>ID</RefColNames>
+    </foreign-key>
+    <column id="42" parent="11" name="ID">
       <Position>1</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
     </column>
-    <column id="45" parent="12" name="name">
+    <column id="43" parent="11" name="name">
       <Position>2</Position>
       <DataType>varchar(60)|0</DataType>
     </column>
-    <key id="46" parent="12" name="PRIMARY">
+    <key id="44" parent="11" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>ID</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="47" parent="13" name="ID">
+    <column id="45" parent="12" name="ID">
       <Position>1</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
     </column>
-    <column id="48" parent="13" name="copies_available">
+    <column id="46" parent="12" name="copies_available">
       <Position>2</Position>
       <DataType>int(11)|0</DataType>
     </column>
-    <key id="49" parent="13" name="PRIMARY">
+    <key id="47" parent="12" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>ID</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="50" parent="14" name="CD_ID">
+    <column id="48" parent="13" name="CD_ID">
       <Position>1</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="51" parent="14" name="SONG_ID">
+    <column id="49" parent="13" name="SONG_ID">
       <Position>2</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="52" parent="14" name="ID">
+    <column id="50" parent="13" name="ID">
       <Position>3</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
     </column>
-    <index id="53" parent="14" name="fk_CD_has_SONG_CD1_idx">
+    <index id="51" parent="13" name="fk_CD_has_SONG_CD1_idx">
       <ColNames>CD_ID</ColNames>
     </index>
-    <index id="54" parent="14" name="fk_CD_has_SONG_SONG1_idx">
+    <index id="52" parent="13" name="fk_CD_has_SONG_SONG1_idx">
       <ColNames>SONG_ID</ColNames>
     </index>
-    <key id="55" parent="14" name="PRIMARY">
+    <key id="53" parent="13" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>ID</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="56" parent="14" name="fk_CD_has_SONG_CD1">
+    <foreign-key id="54" parent="13" name="fk_CD_has_SONG_CD1">
       <ColNames>CD_ID</ColNames>
       <RefSchemaName>mydb</RefSchemaName>
       <RefTableName>cd</RefTableName>
       <RefColNames>ID</RefColNames>
     </foreign-key>
-    <foreign-key id="57" parent="14" name="fk_CD_has_SONG_SONG1">
+    <foreign-key id="55" parent="13" name="fk_CD_has_SONG_SONG1">
       <ColNames>SONG_ID</ColNames>
       <RefSchemaName>mydb</RefSchemaName>
       <RefTableName>song</RefTableName>
       <RefColNames>ID</RefColNames>
     </foreign-key>
-    <column id="58" parent="15" name="ID">
+    <column id="56" parent="14" name="ID">
       <Position>1</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
     </column>
-    <column id="59" parent="15" name="genre">
+    <column id="57" parent="14" name="genre">
       <Position>2</Position>
       <DataType>varchar(40)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <index id="60" parent="15" name="genre">
+    <index id="58" parent="14" name="genre">
       <ColNames>genre</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="61" parent="15" name="PRIMARY">
+    <key id="59" parent="14" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>ID</ColNames>
       <Primary>1</Primary>
     </key>
-    <key id="62" parent="15" name="genre">
+    <key id="60" parent="14" name="genre">
       <ColNames>genre</ColNames>
       <UnderlyingIndexName>genre</UnderlyingIndexName>
     </key>
-    <column id="63" parent="16" name="ID">
+    <column id="61" parent="15" name="ID">
       <Position>1</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
     </column>
-    <column id="64" parent="16" name="name">
+    <column id="62" parent="15" name="name">
       <Position>2</Position>
       <DataType>varchar(60)|0</DataType>
     </column>
-    <column id="65" parent="16" name="band_id">
+    <column id="63" parent="15" name="band_id">
       <Position>3</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="66" parent="16" name="genre_id">
+    <column id="64" parent="15" name="genre_id">
       <Position>4</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <index id="67" parent="16" name="author_id_idx">
+    <index id="65" parent="15" name="author_id_idx">
       <ColNames>band_id</ColNames>
     </index>
-    <index id="68" parent="16" name="ganre_of_song_idx">
+    <index id="66" parent="15" name="ganre_of_song_idx">
       <ColNames>genre_id</ColNames>
     </index>
-    <key id="69" parent="16" name="PRIMARY">
+    <key id="67" parent="15" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>ID</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="70" parent="16" name="song_to_author">
+    <foreign-key id="68" parent="15" name="FKmhvlyl144g91pcv15l70gc52j">
       <ColNames>band_id</ColNames>
       <RefSchemaName>mydb</RefSchemaName>
       <RefTableName>band</RefTableName>
       <RefColNames>ID</RefColNames>
     </foreign-key>
-    <foreign-key id="71" parent="16" name="ganre_of_song">
+    <foreign-key id="69" parent="15" name="song_to_author">
+      <ColNames>band_id</ColNames>
+      <RefSchemaName>mydb</RefSchemaName>
+      <RefTableName>band</RefTableName>
+      <RefColNames>ID</RefColNames>
+    </foreign-key>
+    <foreign-key id="70" parent="15" name="FK3kr980xhy18ojchq1ekbevypy">
       <ColNames>genre_id</ColNames>
       <RefSchemaName>mydb</RefSchemaName>
       <RefTableName>genre</RefTableName>
       <RefColNames>ID</RefColNames>
     </foreign-key>
-    <column id="72" parent="17" name="song_id">
+    <foreign-key id="71" parent="15" name="ganre_of_song">
+      <ColNames>genre_id</ColNames>
+      <RefSchemaName>mydb</RefSchemaName>
+      <RefTableName>genre</RefTableName>
+      <RefColNames>ID</RefColNames>
+    </foreign-key>
+    <column id="72" parent="16" name="song_id">
       <Position>1</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="73" parent="17" name="album_id">
+    <column id="73" parent="16" name="album_id">
       <Position>2</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="74" parent="17" name="ID">
+    <column id="74" parent="16" name="ID">
       <Position>3</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
     </column>
-    <column id="75" parent="17" name="version">
+    <column id="75" parent="16" name="version">
       <Position>4</Position>
       <DataType>varchar(45)|0</DataType>
     </column>
-    <index id="76" parent="17" name="fk_SONG_has_ALBUM_ALBUM1_idx">
+    <index id="76" parent="16" name="fk_SONG_has_ALBUM_ALBUM1_idx">
       <ColNames>album_id</ColNames>
     </index>
-    <index id="77" parent="17" name="fk_SONG_has_ALBUM_SONG1">
+    <index id="77" parent="16" name="FKijc5er1n1tq6ib1kjumnecjks">
       <ColNames>song_id</ColNames>
     </index>
-    <key id="78" parent="17" name="PRIMARY">
+    <key id="78" parent="16" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>ID</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="79" parent="17" name="fk_SONG_has_ALBUM_SONG1">
+    <foreign-key id="79" parent="16" name="FKijc5er1n1tq6ib1kjumnecjks">
       <ColNames>song_id</ColNames>
       <RefSchemaName>mydb</RefSchemaName>
       <RefTableName>song</RefTableName>
       <RefColNames>ID</RefColNames>
     </foreign-key>
-    <foreign-key id="80" parent="17" name="fk_SONG_has_ALBUM_ALBUM1">
+    <foreign-key id="80" parent="16" name="fk_SONG_has_ALBUM_SONG1">
+      <ColNames>song_id</ColNames>
+      <RefSchemaName>mydb</RefSchemaName>
+      <RefTableName>song</RefTableName>
+      <RefColNames>ID</RefColNames>
+    </foreign-key>
+    <foreign-key id="81" parent="16" name="FKg8c9thv17tamxg9fkm58ri3qy">
       <ColNames>album_id</ColNames>
       <RefSchemaName>mydb</RefSchemaName>
       <RefTableName>album</RefTableName>
       <RefColNames>ID</RefColNames>
     </foreign-key>
-    <column id="81" parent="18" name="id">
+    <foreign-key id="82" parent="16" name="fk_SONG_has_ALBUM_ALBUM1">
+      <ColNames>album_id</ColNames>
+      <RefSchemaName>mydb</RefSchemaName>
+      <RefTableName>album</RefTableName>
+      <RefColNames>ID</RefColNames>
+    </foreign-key>
+    <column id="83" parent="17" name="id">
       <Position>1</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
     </column>
-    <column id="82" parent="18" name="login">
+    <column id="84" parent="17" name="login">
       <Position>2</Position>
       <DataType>varchar(64)|0</DataType>
     </column>
-    <column id="83" parent="18" name="password">
+    <column id="85" parent="17" name="password">
       <Position>3</Position>
       <DataType>varchar(256)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="84" parent="18" name="status_id">
+    <column id="86" parent="17" name="status_id">
       <Position>4</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <index id="85" parent="18" name="login">
+    <index id="87" parent="17" name="login">
       <ColNames>login</ColNames>
       <Unique>1</Unique>
     </index>
-    <index id="86" parent="18" name="FKd6goa3imkfy0ve7v9saege0py">
+    <index id="88" parent="17" name="FKd6goa3imkfy0ve7v9saege0py">
       <ColNames>status_id</ColNames>
     </index>
-    <key id="87" parent="18" name="PRIMARY">
+    <key id="89" parent="17" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <key id="88" parent="18" name="login">
+    <key id="90" parent="17" name="login">
       <ColNames>login</ColNames>
       <UnderlyingIndexName>login</UnderlyingIndexName>
     </key>
-    <foreign-key id="89" parent="18" name="FKd6goa3imkfy0ve7v9saege0py">
+    <foreign-key id="91" parent="17" name="FKd6goa3imkfy0ve7v9saege0py">
       <ColNames>status_id</ColNames>
       <RefSchemaName>mydb</RefSchemaName>
       <RefTableName>user_status</RefTableName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <column id="90" parent="19" name="id">
+    <column id="92" parent="18" name="id">
       <Position>1</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
     </column>
-    <column id="91" parent="19" name="status">
+    <column id="93" parent="18" name="status">
       <Position>2</Position>
       <DataType>varchar(64)|0</DataType>
     </column>
-    <key id="92" parent="19" name="PRIMARY">
+    <key id="94" parent="18" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <argument id="93" parent="25" name="userName">
-      <DataType>varchar(64)|0</DataType>
-    </argument>
-    <argument id="94" parent="25" name="pword">
-      <DataType>varchar(256)|0</DataType>
-    </argument>
-    <argument id="95" parent="25" name="authorities">
-      <DataType>varchar(64)|0</DataType>
-    </argument>
   </database-model>
 </dataSource>

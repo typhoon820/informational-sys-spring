@@ -1,12 +1,5 @@
 package com.music.view;
 
-import com.music.DAO.SongDAO;
-import com.music.model.SongEntity;
-import org.springframework.beans.factory.annotation.Autowired;
-
-import java.util.ArrayList;
-import java.util.List;
-
 public class FullSongView {
     private int id;
     private String name;

@@ -13,14 +13,6 @@ public class Application extends AbstractJavaFXApplication {
 
     private SpringFxmlLoader loader = SpringFxmlLoader.getLoader();
 
-//    @Qualifier("mainView")
-//    @Autowired
-//    private ControllerConfig.ViewHolder view;
-//
-//    @Qualifier("menuView")
-//    @Autowired
-//    ControllerConfig.ViewHolder viewHolder;
-
 
     @Override
     public void start(Stage stage) throws Exception {

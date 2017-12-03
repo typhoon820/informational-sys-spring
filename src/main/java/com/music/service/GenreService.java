@@ -1,6 +1,6 @@
 package com.music.service;
 
-import com.music.model.GenreEntity;
+import com.music.entity.GenreEntity;
 
 import java.util.List;
 

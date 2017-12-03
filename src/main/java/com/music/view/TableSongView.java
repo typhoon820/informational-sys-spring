@@ -1,7 +1,6 @@
 package com.music.view;
 
-import com.music.model.AbstractModel;
-import com.music.utils.Annotations.Getter;
+import com.music.entity.AbstractModel;
 
 public class TableSongView extends AbstractModel {
     private int id;

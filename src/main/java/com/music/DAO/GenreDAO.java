@@ -1,9 +1,6 @@
 package com.music.DAO;
 
-import com.music.model.AlbumEntity;
-import com.music.model.GenreEntity;
-import org.springframework.data.repository.CrudRepository;
-import org.springframework.transaction.annotation.Transactional;
+import com.music.entity.GenreEntity;
 
 import java.util.List;
 

@@ -1,6 +1,6 @@
 package com.music.utils;
 
-import com.music.model.AbstractModel;
+import com.music.entity.AbstractModel;
 import com.music.utils.Annotations.Getter;
 
 import java.lang.reflect.Method;

@@ -1,7 +1,7 @@
 package com.music.controller;
 
 import com.jfoenix.controls.JFXButton;
-import com.music.model.AbstractModel;
+import com.music.entity.AbstractModel;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;

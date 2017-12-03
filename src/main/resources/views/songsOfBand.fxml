@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="500.0" prefWidth="400.0" style="-fx-background-color: #2F4F4F;" stylesheets="@/css/combobox.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.music.controller.SongListController">
+   <children>
+      <VBox prefHeight="500.0" prefWidth="400.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <TableView fx:id="songTable" onMouseClicked="#deleteSong" prefHeight="418.0" prefWidth="400.0">
+              <columns>
+                <TableColumn fx:id="songNameCol" prefWidth="200.0" text="Song" />
+                <TableColumn fx:id="genreCol" prefWidth="200.0" text="Genre" />
+              </columns>
+            </TableView>
+            <JFXButton fx:id="addSongButton" onAction="#addNewSong" prefHeight="39.0" prefWidth="249.0" text="+ new song">
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="20.0" left="120.0" right="120.0" top="20.0" />
+               </VBox.margin>
+            </JFXButton>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

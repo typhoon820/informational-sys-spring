@@ -2,8 +2,14 @@ package com.music.controller;
 
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXTextField;
-import com.music.model.*;
-import javafx.beans.InvalidationListener;
+import com.music.entity.*;
+import com.music.service.ArtistService;
+import com.music.service.BandService;
+import com.music.service.SongService;
+import com.music.utils.Observers.ArtistObserver;
+import com.music.utils.Observers.BandObserver;
+import com.music.utils.Observers.BandsObserver;
+import com.music.utils.Observers.GenreObserver;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -15,6 +21,7 @@ import javafx.scene.layout.GridPane;
 import javafx.scene.layout.VBox;
 
 import com.music.utils.*;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import java.net.URL;
@@ -24,7 +31,11 @@ import java.util.ResourceBundle;
 
 
 @Component
-public class InsertionController extends AbstractController implements Initializable, BandObserver, GenreObserver {
+public class InsertionController extends AbstractController implements Initializable,
+                                                                    BandObserver,
+                                                                    GenreObserver,
+                                                                    ArtistObserver,
+                                                                    BandsObserver{
     @FXML
     private VBox slideBox;
 
@@ -42,21 +53,20 @@ public class InsertionController extends AbstractController implements Initializ
     private JFXButton addButton;
     private List<Node> n = new ArrayList<>();
 
-    //PersistenceService persistenceService = new PersistenceService();
+//    static AbstractModel model;
+//    static SongEntity currentSong;
+//    static ArtistEntity currentArtist;
+//    static BandEntity currentBand;
 
-
-    private AbstractModel model;
-//
-//    private Printer printer = new Printer();
-//
-//    private GenreDAO genreDAO = new GenreDAO();
-//
-//    private ModelDispatcher modelDispatcher = new ModelDispatcher();
-
+    @Autowired
+    ArtistService artistService;
+    @Autowired
+    SongService songService;
+    @Autowired
+    BandService bandService;
 
     @FXML
     void addModel(ActionEvent event) {
-
         int i=0;
         ObservableList<Node> list = pane.getPane().getChildren();
         for(Node n: list){
@@ -64,17 +74,47 @@ public class InsertionController extends AbstractController implements Initializ
             System.out.println(((JFXTextField)n).getText() + " ->"+i);
             i++;
         }
-        //System.out.println((JFXTextField)(pane.getPane().g));
-
-       // ((SongEntity)model).setName(list.get(4));
-
+        pane.invalidateStringFields(currentModel);
+        if(currentModel instanceof ArtistEntity){
+            //((ArtistEntity) model).setBands(CurrentArtist.getInstance().getArtistEntity().getBands());
+            artistService.save((ArtistEntity) currentModel);
+            currentModel = new ArtistEntity();
+        }
+        if (currentModel instanceof SongEntity){
+            songService.save((SongEntity)currentModel);
+            currentModel= new SongEntity();
+        }
+        if(currentModel instanceof BandEntity){
+            bandService.save((BandEntity)currentModel);
+            currentModel = new BandEntity();
+        }
+        pane.clear();
+        pane.printModelInfo(currentModel);
     }
 
     @FXML
     void choseItem(ActionEvent event) {
         pane.clear();
-        model = comboBox.getSelectionModel().getSelectedItem();
-        pane.printModelInfo(model);
+        currentModel = comboBox.getSelectionModel().getSelectedItem();
+        System.out.println(currentModel);
+        //currentModel = model;
+        SelectionModel.getInstance().setModel(currentModel.getClass());
+        System.out.println(SelectionModel.getInstance().getModel());
+        pane.printModelInfo(currentModel);
+//        if(currentModel instanceof SongEntity){
+//            CurrentSong.getInstance().setSongEntity((SongEntity)model);
+//            currentSong = (SongEntity)model;
+//        }
+//        if (model instanceof ArtistEntity){
+//            CurrentArtist.getInstance().setArtistEntity((ArtistEntity) model);
+//            CurrentArtistBandList.getInstance().setArtistBandEntityList(new ArrayList<>());
+//            currentArtist = (ArtistEntity)model;
+//        }
+//        if (model instanceof BandEntity){
+//            currentBand = (BandEntity)model;
+//        }
+
+
     }
 
     void prepareGrid(VBox box) {
@@ -86,8 +126,9 @@ public class InsertionController extends AbstractController implements Initializ
     }
 
     private void initModelList(ComboBox<AbstractModel> modelList) {
-        ObservableList<AbstractModel> list = FXCollections.observableArrayList(new AlbumEntity(),
-                new ArtistEntity(), new BandEntity(), new CdEntity(), new SongEntity(), new GenreEntity());
+        ObservableList<AbstractModel> list = FXCollections.observableArrayList(new ArtistEntity(),
+                new BandEntity(),
+                new SongEntity());
         modelList.setItems(list);
         //modelList.setItems(list);
         // modelList.set
@@ -103,6 +144,8 @@ public class InsertionController extends AbstractController implements Initializ
         pane.setActive(true);
         pane.setPane(insertionPane);
         initModelList(comboBox);
+
+        //((Stage)(addButton.getScene().getWindow())).initOwner(((MenuController)stageManager.getLoader().getController("../views/menu.fxml")).mainPane.getScene().getWindow());
     }
 
     @Override
@@ -111,21 +154,36 @@ public class InsertionController extends AbstractController implements Initializ
 
     @Override
     public void updateBand(BandEntity bandEntity) {
+        
         if (pane.isActive()) {
-            pane.invalidateStringFields(model);
-            ((SongEntity) this.model).setBand(bandEntity);
+            pane.invalidateStringFields(currentModel);
+            ((SongEntity) currentModel).setBand(bandEntity);
             pane.clear();
-            pane.printModelInfo(this.model);
+            pane.printModelInfo(currentModel);
         }
     }
 
     @Override
     public void updateGenre(GenreEntity genreEntity) {
         if (pane.isActive()) {
-            pane.invalidateStringFields(this.model);
-            ((SongEntity) this.model).setGenre(genreEntity);
+            pane.invalidateStringFields(currentModel);
+            ((SongEntity) currentModel).setGenre(genreEntity);
             pane.clear();
-            pane.printModelInfo(this.model);
+            pane.printModelInfo(currentModel);
         }
+    }
+
+    @Override
+    public void updateArtist(ArtistEntity artistEntity) {
+
+    }
+
+    @Override
+    public void updateBands(List<BandEntity> bands) {
+//        if (pane.isActive()){
+//            pane.invalidateStringFields(this.model);
+//            ((ArtistEntity)this.model).setBands(bands);
+//            pane.printModelInfo(this.model);
+//        }
     }
 }

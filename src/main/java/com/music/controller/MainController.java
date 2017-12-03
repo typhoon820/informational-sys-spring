@@ -3,23 +3,21 @@ package com.music.controller;
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXPasswordField;
 import com.jfoenix.controls.JFXTextField;
-import com.music.DAO.UserDAO;
-import com.music.model.UserEntity;
+import com.music.Security.CurrentUser;
+import com.music.Security.Encoder;
+import com.music.entity.UserEntity;
 import com.music.service.UserService;
+import com.music.utils.Alerts.WarningAlert;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.ButtonType;
 import javafx.stage.Stage;
 
-import com.music.utils.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import javax.xml.ws.soap.Addressing;
-import java.lang.reflect.Field;
 import java.net.URL;
-import java.sql.SQLException;
 import java.util.List;
 import java.util.ResourceBundle;
 
@@ -55,8 +53,6 @@ public class MainController extends AbstractController implements Initializable 
         encoder = Encoder.getInstance();
 
 
-        System.out.println(Utils.makeStringBeautiful("songDaoObject"));
-
     }
 
     @FXML
@@ -70,42 +66,33 @@ public class MainController extends AbstractController implements Initializable 
     void login(ActionEvent event) {
 
 
+        //System.out.println(showDialog("111").showAndWait().get());
+
 
         String tLogin = login.getText();
         String pWord = password.getText();
-//        UserEntity u = new UserEntity();
-//        u.setLogin(tLogin);
-//        u.setPassword(pWord);
-//        userService.save(u);
 
         UserEntity loggingInUser = userService.findByName(tLogin);
-        List<UserEntity> list = userService.findAll();
-        System.out.println(tLogin + "   "+loggingInUser.getLogin());
-        Field[] f = loggingInUser.getClass().getDeclaredFields();
-        for (Field fl:f){
-            System.out.println(Utils.isFieldNonCollectionObject(fl));
-        }
         if (loggingInUser == null){
-            if (Utils.showWarningAlert("No user with such login").get() == ButtonType.OK) {
+
+            if (showAlert(new WarningAlert(),"No user with such login").showAndWait().get() == ButtonType.OK) {
                 login.setText("");
                 password.setText("");
             }
             return;
         }
 
-
         if (encoder.getMethods().checkPassword(password.getText(), loggingInUser.getPassword())) {
+            CurrentUser.getLoggedInUser().setUserEntity(loggingInUser);
             closeStage();
             // System.out.println();
             stageManager.showStage("../views/menu.fxml", true, "Menu");
         } else {
-            if (Utils.showWarningAlert("Password is incorrect").get() == ButtonType.OK) {
+            if (showAlert(new WarningAlert(),"Password is incorrect").showAndWait().get() == ButtonType.OK) {
                 login.setText("");
                 password.setText("");
             }
         }
-
-
     }
 
     private void closeStage() {
